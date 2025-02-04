@@ -1,8 +1,8 @@
 
 import './global.css';
-import Header from './components/Header';
 import { ReactDOM } from 'react';
 import { BrowserRouter, BrowserRouter as Router } from 'react-router-dom';
+import Home from './pages/Home';
 
 
 function App() {
@@ -10,7 +10,7 @@ function App() {
 
   return (
     <BrowserRouter>
-      <Header />
+      <Home/>
     </BrowserRouter>
   )
 }

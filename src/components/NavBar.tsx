@@ -12,7 +12,7 @@ export default function Navbar() {
      
         <Link to={"/Shop"}>Shop</Link>
         
-        <p>About</p>
+        <Link to={""}>About</Link>
 
         <Link to={"/Contact"}>Contact</Link>
         
