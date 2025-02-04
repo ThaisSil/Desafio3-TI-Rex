@@ -1,20 +1,30 @@
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faShoppingCart, faUser } from '@fortawesome/free-solid-svg-icons';
+import Navbar from '../components/NavBar';
+import logo from '../assets/images/Logo.png';
+
 
 
 const Header = () => {
   return (
     
-        <header>
-          <div className="flex flex-row items-center justify-between">
-            <img className= ' w-[50px] h-8'src='../assets/images/Logo.png' alt="logo" />
+        <header className='my-[30px] ml-[54px]'>
+          <div className="flex items-center justify-between">
+            <div className='flex items-center'>
+            <img className= ' w-[50px] h-8' src= {logo} alt="logo" />
             <h1 className= ' text-black text-[32px] font-bold '>Furniro</h1>
+            </div>
+            <div>
+            <Navbar />
+            </div>
+            <div className='flex items-center space-x-3 mr-[100px] w-7 h-7'>
+            <FontAwesomeIcon icon={faUser} />
+            <FontAwesomeIcon icon={faShoppingCart} />
             
-            
-            <i className="fa-regular fa-user"></i>
-            <i className="fa-light fa-cart-shopping"></i>
             </div>
             
-                
+            </div>    
         </header>
       
   
