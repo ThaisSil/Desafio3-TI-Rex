@@ -6,7 +6,7 @@ export default function Navbar() {
   
   return (
     
-      <div className="flex flex-row space-x-[75px] mr-[320px]">
+      <div className="flex flex-row space-x-20">
    
         <Link to={"/"}>Home</Link>
      
