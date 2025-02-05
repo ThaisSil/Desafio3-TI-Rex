@@ -1,8 +1,7 @@
 
 import './global.css';
-import { ReactDOM } from 'react';
 import { BrowserRouter, BrowserRouter as Router } from 'react-router-dom';
-import Home from './pages/Home';
+import AppRoutes from './AppRoutes';
 
 
 function App() {
@@ -10,7 +9,7 @@ function App() {
 
   return (
     <BrowserRouter>
-      <Home/>
+      <AppRoutes />
     </BrowserRouter>
   )
 }
