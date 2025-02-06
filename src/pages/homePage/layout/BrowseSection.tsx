@@ -1,7 +1,7 @@
 
-import Dining from '../assets/images/Dining.png';
-import Living from '../assets/images/Living.png';
-import Bedroom from '../assets/images/Bedroom.png';
+import Dining from '../../../assets/images/Dining.png';
+import Living from '../../../assets/images/Living.png';
+import Bedroom from '../../../assets/images/Bedroom.png';
 
 
 const BrowseSection = () => {

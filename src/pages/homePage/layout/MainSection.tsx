@@ -1,4 +1,4 @@
-import Image from '../assets/images/MainImage.png';
+import Image from '../../../assets/images/MainImage.png';
 
 const MainSection = () => {
   return (

@@ -1,10 +1,10 @@
 import React, {useState} from 'react'
-import CarouselProps from '../../../components/CarouselProps'
-import Carrousel1 from '../assets/images/Carrousel1.png'
-import Carrousel2 from '../assets/images/Carrousel2.png'
-import Living from '../assets/images/Living.png'
-import Dining from '../assets/images/Dining.png'
-import Bedroom from '../assets/images/Bedroom.png'
+import CarouselProps from '../../../components/CarouselProps';
+import Carrousel1 from '../../../assets/images/Carrousel1.png';
+import Carrousel2 from '../../../assets/images/Carrousel2.png';
+import Living from '../../../assets/images/Living.png';
+import Dining from '../../../assets/images/Dining.png';
+import Bedroom from '../../../assets/images/Bedroom.png';
 
 
 const images = [Carrousel1, Carrousel2, Living, Dining, Bedroom]

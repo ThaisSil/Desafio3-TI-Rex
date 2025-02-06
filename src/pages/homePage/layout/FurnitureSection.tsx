@@ -1,4 +1,4 @@
-import Furniture from '../assets/images/Furniture.png';
+import Furniture from '../../../assets/images/Furniture.png';
 
 const FurnitureSection = () => {
   return (
