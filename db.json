@@ -1,0 +1,130 @@
+{
+    "products":[
+        {
+            "id": 1,
+            "name": "Syltherine",
+            "description": "Stylish cafe chair",
+            "price": 2.500000,
+            "image": "images/Image1.jpg"
+        },
+        {
+            "id": 2,
+            "name": "Leviosa",
+            "description": "Stylish cafe chair",
+            "price": 2.500000,
+            "image": "public/images/Image2.jpg"
+        },
+        {
+            "id": 3,
+            "name": "Lolito",
+            "description": "Stylish cafe chair",
+            "price": 2500000,
+            "image": "public/images/Image3.jpg"
+        },
+        {
+            "id": 4,
+            "name": "Respira",
+            "description": "Outdoor bar table and stool",
+            "price": 500.000,
+            "image": "public/images/Image4.jpg"
+        },
+        {
+            "id": 5,
+            "name": "Grifo",
+            "description": "Night lamp",
+            "price": 1.500000,
+            "image": "public/images/Image5.jpg"
+        },
+        {
+            "id": 6,
+            "name": "Muggo",
+            "description": "Small mug",
+            "price": 150.000,
+            "image": "public/images/Image6.jpg"
+        },
+        {
+            "id": 7,
+            "name": "Pingky",
+            "description": "Cute bed set",
+            "price": 7.000000,
+            "image": "public/images/Image7.jpg"
+        },
+        {
+            "id": 8,
+            "name": "Leviosa",
+            "description": "Stylish cafe chair",
+            "price": 2.500000,
+            "image": "public/images/Image8.jpg"
+        },
+        {
+            "id": 9,
+            "name": "Potty",
+            "description": "Minimalist flower pot",
+            "price": 500.000,
+            "image": "public/images/Image1.jpg"
+        },
+        {
+            "id": 10,
+            "name": "Respira",
+            "description": "Outdoor bar table and stool",
+            "price": 500.000,
+            "image": "hpublic/images/Image2.jpg"
+        },
+        {
+            "id": 11,
+            "name": "Grifo",
+            "description": "Night lamp",
+            "price": 1.500000,
+            "image": "public/images/Image3.jpg"
+        },
+        {
+            "id": 12,
+            "name": "Muggo",
+            "description": "Small mug",
+            "price": 150.000,
+            "image": "public/images/Image4.jpg"
+        },
+        {
+            "id": 13,
+            "name": "Arka",
+            "description": "Modern coffee table",
+            "price": 350.000,
+            "image": "public/images/Image5.jpg"
+        },
+        {
+            "id": 14,
+            "name": "EcoShade",
+            "description": "Sustainable desk lamp",
+            "price": 120.000,
+            "image": "public/images/Image6.jpg"
+        },
+        {
+            "id": 15,
+            "name": "Luna",
+            "description": "Minimalist pendant light",
+            "price": 85.000,
+            "image": "public/images/Image7.jpg"
+        },
+        {
+            "id": 16,
+            "name": "Comodo",
+            "description": "Soft armchair",
+            "price": 980.000,
+            "image": "public/images/Image8.jpg"
+        },
+        {
+            "id": 17,
+            "name": "Verta",
+            "description": "Elegant side table",
+            "price": 200.000,
+            "image": "public/images/Image1.jpg"
+        },
+        {
+            "id": 18,
+            "name": "Luzza",
+            "description": "LED floor lamp",
+            "price": 60.000,
+            "image": "public/images/Image2.jpg"
+        }
+    ]
+}

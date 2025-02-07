@@ -1,6 +1,6 @@
 import ContactForm from "../components/ContactForm";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faClock, faLocation, faLocationPin, faPhone } from '@fortawesome/free-solid-svg-icons';
+import { faClock, faPhone } from '@fortawesome/free-solid-svg-icons';
 import { faLocationDot } from "@fortawesome/free-solid-svg-icons/faLocationDot";
 
 const ContactLayout = () => {
@@ -14,23 +14,25 @@ const ContactLayout = () => {
         Hesitate!</p>
         </div>
         <div className="flex flex-row justify-between mx-48 " >
-        <div className="flex flex-col items-centerw-[393px] h-[537px] mt-16 mb-80">
+        <div className="flex flex-col items-centerw-[393px] h-[537px] mt-24 mb-80">
             
-            <FontAwesomeIcon icon={faLocationDot} />
-            <div className="w-[212px] ">
+            
+            <div className="w-[212px] mb-10"> 
+            <FontAwesomeIcon icon={faLocationDot} className="w-[22px]"/>
                 <p className="font-medium text-2xl">Address</p>
                 <p>236 5th SE Avenue, New York NY10000, United States</p>
             </div>
             
-            <div className="w-[212px] ">
-            <FontAwesomeIcon icon={faPhone} />
+            
+            <div className="w-[212px] mb-10 ">
+            <FontAwesomeIcon icon={faPhone} className="w-[22px] " />
                 <p className="font-medium text-2xl">Phone</p>
                 <p>Mobile: +(84) 546-6789
                 Hotline: +(84) 456-6789</p>
             </div>
            
-            <div className="w-[212px]">
-            <FontAwesomeIcon icon={faClock} />
+            <div className="w-[212px] mb-10">
+            <FontAwesomeIcon icon={faClock} className="w-[22px]"/>
                 <p className="font-medium text-2xl">Working Time</p>
                 <p>Monday-Friday: 9:00 - 22:00
                 Saturday-Sunday: 9:00 - 21:00</p>

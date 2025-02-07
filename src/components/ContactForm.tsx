@@ -31,9 +31,9 @@ const ContactForm: React.FC = () => {
 
   return (
     <div >
-      <form onSubmit={handleSubmit(onSubmit)} className="mx-[52px] ">
+      <form onSubmit={handleSubmit(onSubmit)} className="mx-[52px] mt-16">
         <div>
-          <div className="font-medium">
+          <div className="font-medium py-[22px]">
             <label htmlFor="name">Your Name</label>
           </div>
           <input
@@ -43,9 +43,9 @@ const ContactForm: React.FC = () => {
             {...register("name")}
          className="rounded-lg text-gray-500 w-[528px] h-[75px] border border-gray-500 p-4"
           />
-          <p>{errors.name && <small>{errors.name.message}</small>}</p>
+          <p>{errors.name && <small className="text-red-600">{errors.name.message}</small>}</p>
 
-          <div className="font-medium">
+          <div className="font-medium py-[22px]">
             <label htmlFor="email">Email Address</label>
           </div>
           <input
@@ -55,9 +55,9 @@ const ContactForm: React.FC = () => {
             {...register("email")}
             className="rounded-lg text-gray-500 w-[528px] h-[75px] border border-gray-500 p-4"
           />
-          <p>{errors.email && <small>{errors.email.message}</small>}</p>
+          <p>{errors.email && <small className="text-red-600">{errors.email.message}</small>}</p>
 
-          <div className="font-medium">
+          <div className="font-medium py-[22px]">
             <label htmlFor="subject">Subject</label>
           </div>
           <input
@@ -67,9 +67,9 @@ const ContactForm: React.FC = () => {
             {...register("subject")}
            className="rounded-lg text-gray-500 w-[528px] h-[75px] border border-gray-500 p-4"
           />
-          <p>{errors.subject && <small>{errors.subject.message}</small>}</p>
+          <p>{errors.subject && <small className="text-red-600">{errors.subject.message}</small>}</p>
 
-          <div className="font-medium">
+          <div className="font-medium py-[22px]">
             <label htmlFor="message">Message</label>
           </div>
           <textarea
@@ -78,9 +78,9 @@ const ContactForm: React.FC = () => {
             {...register("message")}
            className="rounded-lg text-gray-500 w-[528px] h-[75px] border border-gray-500 p-4"
           />
-          <p>{errors.message && <small>{errors.message.message}</small>}</p>
+          <p>{errors.message && <small className="text-red-600">{errors.message.message}</small>}</p>
         </div>
-        <button type="submit" className='font-bold text-white bg-[#B88E2F] w-[222px] h-[74px] gap-[10px] mt-[46px]'>Submit</button>
+        <button type="submit" className='text-white bg-[#B88E2F] w-[237px] h-[55px] gap-[10px] mt-[46px] rounded-md'>Submit</button>
       </form>
     </div>
   );
