@@ -9,14 +9,15 @@ import Linkedin from '../assets/images/Linkedin.png';
 
 const Footer = () => {
   return (
-    <footer>
+    <footer className='border-t-2 border-gray-300 mt-12'>
     <div className='container mx-auto px-4 '>
-      <div className='grid grid-cols-1 my-12 ml-[100px] md:grid-cols-4'>
+      <div className='flex flex-row py-12'>
         <div className='flex flex-col '>
       <p className="font-bold text-2xl text-black">Furniro.</p>
-     
-      <p className='text-[#9F9F9F] w-full my-14'>400 University Drive Suite 200 Coral Gables,
+       <div>
+      <p className='text-[#9F9F9F] w-[285px] h-[72px] my-14'>400 University Drive Suite 200 Coral Gables,<br />
       FL 33134 USA</p>
+      </div>
       <div className='flex mt-6'>
       <a href="https://www.facebook.com/"><img src={Facebook} alt="Facebook"/></a>
       <a href="https://www.instagram.com/"><img src={Instagram} alt='Instagram'/> </a>
@@ -26,34 +27,34 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className='flex flex-col md:flex-row md:space-x-12'>
+      <div className='flex flex-row justify-between ml-36'>
         
-       <ul className='text-[#9F9F9F] font-medium px-[144px]'>Links
-            <li className='text-black'>Home</li>
-            <li className='text-black'>Shop</li>
-            <li className='text-black'>About</li>
-            <li className='text-black'>Contact</li>
-        </ul>
+       <div className='text-[#9F9F9F] font-medium'>Links
+            <div className='text-black py-11'>Home</div>
+            <div className='text-black'>Shop</div>
+            <div className='text-black py-11'>About</div>
+            <div className='text-black py11'>Contact</div>
+        </div>
+        <div className='px-32'>
+        <p className='text-[#9F9F9F] font-medium'>Help</p>
         <div>
-        <p className='text-[#9F9F9F] font-medium px-[72px] mb-9'>Help</p>
-        <ul>
-            <li className='text-black'>Payment Options</li>
-            <li className='text-black'>Returns</li>
-            <li className='text-black'>Privacy Police</li>
-        </ul>
+            <div className='text-black py-11'>Payment Options</div>
+            <div className='text-black'>Returns</div>
+            <div className='text-black py-11'>Privacy Police</div>
+        </div>
         </div>
         <div>
             <p className='text-[#9F9F9F] font-medium'>Newsletter</p>
-            <div className='flex items-center space-x-2 mt-9'>
-            <input type="email" placeholder='Enter Your Email Address' className=" text-sm border-b-2 border-black "/>
-            <button className=" text-black border-b-2 border-black text-sm font-medium">SUBSCRIBE</button>
+            <div className='flex items-center space-x-2 mt-9 '>
+            <input type="email" placeholder='Enter Your Email Address' className=" text-sm border-b-2 border-black w-[200px]"/>
+            <button className=" text-black border-b-2 border-black text-sm font-medium w-[75px]">SUBSCRIBE</button>
         </div>
         </div>
         </div>
       </div>
       </div>
     
-      <div className="text-center text-gray-500 mt-8"> 
+      <div className="border-t border-[#D9D9D9] mt-8 h-[59px] mb-10 mr-48 "> 
         <p>&copy; 2023 furina. All rights reserved.</p>
       </div>
     </footer>
