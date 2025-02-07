@@ -9,8 +9,8 @@ interface Product {
 }
 
 const CardsProducts = () => {
-  const [products, setProducts] = useState<Product[]>([]);
-  const [visibleProducts, setVisibleProducts] = useState(8);
+  const [product, setProducts] = useState<Product[]>([]);
+ 
 
   useEffect(() => {
     fetch(" http://localhost:3000/products")
@@ -18,36 +18,31 @@ const CardsProducts = () => {
       .then((data) => setProducts(data));
   }, []);
 
-  const handleShowMore = () => {
-    setVisibleProducts(visibleProducts + 4);
-  };
+  
 
   return (
     <div>
-      <div className="grid grid-cols-4 gap-4">
-        {products.slice(0, visibleProducts).map((product) => (
-          <div key={product.id}>
+      <div className="grid grid-cols-4 gap-4 mx-[100px] my-20">
+        {product.map((item) => (
+          <div key={item.id}>
             <img
-              src={product.image}
-              alt={product.name}
+              src={item.image}
+              alt={item.name}
               className="w-[285px] h-[301px]"
             />
             <div className="bg-[#F4F5F7] p-4">
               <p className="text-2xl font-semibold text-[#3A3A3A]">
-                {product.name}
+                {item.name}
               </p>
-              <p className="text-[#898989]">{product.description}</p>
+              <p className="text-[#898989]">{item.description}</p>
               <p className="text-xl font-semibold text-[#3A3A3A]">
-                Rp {product.price}
+                Rp {item.price}
               </p>
             </div>
           </div>
         ))}
       </div>
-      <button
-        onClick={handleShowMore}
-        className="text-[#B88E2F] border border-[#B88E2F] w-[245px] h-[48px] mt-8 mb-16 mx-[598px]">
-        Show More</button>
+     
     </div>
   );
 };
