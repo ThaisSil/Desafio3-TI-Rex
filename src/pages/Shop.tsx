@@ -3,9 +3,38 @@ import Banner from '../components/Banner'
 import BgBanner from '../assets/images/BgBanner.png'
 import Warranty from '../components/Warranty'
 import Footer from '../components/Footer'
-import CardsProducts from '../components/CardsProducts'
+//import CardsProducts from '../components/CardsProducts'
+import Filter from '../assets/images/filter.png'
+import Grid from '../assets/images/Grid.png'
+import ViewList from '../assets/images/ViewList.png'
+import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
+
+
+interface Product {
+  id: number;
+  name: string;
+  description: string;
+  price: number;
+  image: string;
+}
 
 const Shop = () => {
+  const [products, setProducts] = useState<Product[]>([]);
+  const navigate = useNavigate();
+ 
+
+  useEffect(() => {
+    fetch(" http://localhost:3000/products")
+      .then((response) => response.json())
+      .then((data) => setProducts(data));
+  }, []);
+ 
+  const handleClick = (id:number) => {
+    navigate(`/SingleProduct/${id}`);
+  };
+  
+  
   return (
     <div>
       <Header />
@@ -14,8 +43,51 @@ const Shop = () => {
       title='Shop '
       subtitle= 'Home >'
       paragraph='Shop'/>
+        <div className="bg-[#F9F1E7] h-[100px] flex flex-row items-center justify-between">
+          <div  className='flex flex-row gap-4 ml-24 mr-6'>
+        <img src={Filter} alt="Filter" />
+        <p className='text-xl'>Filter</p>
+        </div>
+        <div className='flex flex-row gap-6'>
+          <img src={Grid} alt="grid" />
+          <img src={ViewList} alt="viewlist" />
+          </div>
+          <div className='border-l-2 border-[#9F9F9F] mr-[349px] ml-[30px] '>         
+             <input placeholder ='Showing 1–16 of 32 results'className='bg-[#F9F1E7] text-[#9F9F9F] w-[237px] h-[37px] p-8' />
+             </div>
 
-      <CardsProducts />
+          <div className='gap-8 flex flex-row items-center'>
+          <p>Show</p>
+          <input type="text" className='text-[#9F9F9F] w-[55px] h-[55px]' />
+          </div>
+          <div className='gap-8 flex flex-row items-center'>
+          <p>Short by</p>
+          <input type="text" className='text-[#9F9F9F] w-[188px] h-[55px] mr-[100px]' />
+          </div>
+          </div>
+      <div className="grid grid-cols-4 gap-4 mx-[100px] my-20">
+        {products.map((product) => (
+          <div key={product.id} className="cursor-pointer" onClick={() => handleClick(product.id)}>
+            <img
+              src={product.image}
+              alt={product.name}
+              className="w-[285px] h-[301px]"
+            />
+            <div className="bg-[#F4F5F7] p-4">
+              <p className="text-2xl font-semibold text-[#3A3A3A]">
+                {product.name}
+              </p>
+              <p className="text-[#898989]">{product.description}</p>
+              <p className="text-xl font-semibold text-[#3A3A3A]">
+                Rp {product.price}
+              </p>
+            </div>
+          </div>
+        ))}
+      </div>
+     
+    
+
       <Warranty />
       <Footer />
     </div>

@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 interface Product {
   id: number;
@@ -11,6 +12,7 @@ interface Product {
 const Products = () => {
 const [products, setProducts] = useState<Product[]>([]);
 const [visibleProducts, setVisibleProducts] = useState(8);
+const navigate = useNavigate();
 
 
   useEffect(() => {
@@ -18,6 +20,9 @@ const [visibleProducts, setVisibleProducts] = useState(8);
     .then(response => response.json())
     .then(data => setProducts(data));
   }, []);
+  const handleClick = (id:number) => {
+    navigate (`/SingleProduct/${id}`);
+  };
 
   const handleShowMore = () => {
     setVisibleProducts(visibleProducts + 4);
@@ -27,10 +32,11 @@ const [visibleProducts, setVisibleProducts] = useState(8);
   return (
     <div className='flex flex-col items-center justify-center'>
       <p className="font-bold text-[40px] text-[#3A3A3A] mt-14 mb-8">Our Products</p>
+    
       <div className="grid grid-cols-4 gap-4">
       {products.slice(0, visibleProducts).map((product) => (
                                                                                                                                                                           
-          <div key={product.id}>
+          <div key={product.id} className="cursor-pointer" onClick={()=> handleClick(product.id)}>
           <img src={product.image} alt={product.name} className="w-[285px] h-[301px]" />
           <div className="bg-[#F4F5F7] p-4">
           <p className="text-2xl font-semibold text-[#3A3A3A]">{product.name}</p>
