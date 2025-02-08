@@ -10,7 +10,7 @@ import { Link } from 'react-router-dom';
 const Header = () => {
   return (
     
-        <header className='my-[30px] ml-[54px]'>
+        <header className='my-6 ml-8 sm:ml-4'>
           <div className="flex items-center justify-between">
             <div className='flex items-center space-x-4'>
             <img className= ' w-[50px] h-8' src= {logo} alt="logo" />
