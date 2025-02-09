@@ -15,7 +15,10 @@ interface Product {
   id: number;
   name: string;
   description: string;
-  price: number;
+  originalPrice: string;
+  discountPrice: string;
+  discountPercentage: string;
+  isNew: string;
   image: string;
 }
 
@@ -65,22 +68,39 @@ const Shop = () => {
           <input type="text" className='text-[#9F9F9F] w-[188px] h-[55px] mr-[100px]' />
           </div>
           </div>
-      <div className="grid grid-cols-4 gap-4 mx-[100px] my-20">
+
+      <div className="grid grid-cols-4 gap-4  ">
         {products.map((product) => (
-          <div key={product.id} className="cursor-pointer" onClick={() => handleClick(product.id)}>
+          <div key={product.id} className="cursor-pointer relative" onClick={() => handleClick(product.id)}>
             <img
               src={product.image}
               alt={product.name}
               className="w-[285px] h-[301px]"
             />
-            <div className="bg-[#F4F5F7] p-4">
+            {product.discountPercentage &&
+            product.discountPrice !== product.originalPrice && (
+              <div className="flex items-center justify-center bg-[#E97171] text-white rounded-full w-[48px] h-[48px] absolute top-2">
+                <span className="text-sm">{product.discountPercentage}</span>
+              </div>
+            )}
+              {product.isNew === "true" && (
+            <div className="flex items-center justify-center bg-[#2EC1AC] text-white rounded-full w-[48px] h-[48px] absolute top-2">
+              <span className="text-sm">New</span>
+            </div>
+          )}
+            <div className="bg-[#F4F5F7] p-4 w-[285px] h-[145px]">
               <p className="text-2xl font-semibold text-[#3A3A3A]">
                 {product.name}
               </p>
               <p className="text-[#898989]">{product.description}</p>
-              <p className="text-xl font-semibold text-[#3A3A3A]">
-                Rp {product.price}
-              </p>
+              {product.discountPrice !== product.originalPrice && (
+                <span className="text-[#B0B0B0] line-through">
+                  {product.originalPrice}
+                </span>
+              )}
+               <span className="text-xl font-semibold text-[#3A3A3A]">
+              {product.discountPrice || product.originalPrice}
+              </span>
             </div>
           </div>
         ))}
