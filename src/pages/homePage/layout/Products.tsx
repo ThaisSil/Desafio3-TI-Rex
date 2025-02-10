@@ -31,7 +31,7 @@ const navigate = useNavigate();
 
   return (
     <div className='flex flex-col items-center justify-center'>
-      <p className="font-bold text-[40px] text-[#3A3A3A] mt-14 mb-8">Our Products</p>
+      <p className="font-bold text-[40px] text-[#3A3A3A]">Our Products</p>
     
       <div className="grid grid-cols-4 gap-4">
       {products.slice(0, visibleProducts).map((product) => (

@@ -3,12 +3,14 @@ import Banner from '../components/Banner'
 import BgBanner from '../assets/images/BgBanner.png'
 import Warranty from '../components/Warranty'
 import Footer from '../components/Footer'
-//import CardsProducts from '../components/CardsProducts'
 import Filter from '../assets/images/filter.png'
 import Grid from '../assets/images/Grid.png'
 import ViewList from '../assets/images/ViewList.png'
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import Share from '../assets/images/Share.png';
+import Compare from '../assets/images/Compare.png';
+import Heart from '../assets/images/Heart.png';
 
 
 interface Product {
@@ -69,7 +71,7 @@ const Shop = () => {
           </div>
           </div>
 
-      <div className="grid grid-cols-4 gap-4  ">
+      <div className="grid grid-cols-4 gap-4">
         {products.map((product) => (
           <div key={product.id} className="cursor-pointer relative" onClick={() => handleClick(product.id)}>
             <img
@@ -79,12 +81,12 @@ const Shop = () => {
             />
             {product.discountPercentage &&
             product.discountPrice !== product.originalPrice && (
-              <div className="flex items-center justify-center bg-[#E97171] text-white rounded-full w-[48px] h-[48px] absolute top-2">
+              <div className="flex items-center justify-center bg-[#E97171] text-white rounded-full w-[48px] h-[48px] absolute top-2 left-2 ">
                 <span className="text-sm">{product.discountPercentage}</span>
               </div>
             )}
               {product.isNew === "true" && (
-            <div className="flex items-center justify-center bg-[#2EC1AC] text-white rounded-full w-[48px] h-[48px] absolute top-2">
+            <div className="flex items-center justify-center bg-[#2EC1AC] text-white rounded-full w-[48px] h-[48px] absolute top-2 left-2">
               <span className="text-sm">New</span>
             </div>
           )}
@@ -102,9 +104,24 @@ const Shop = () => {
               {product.discountPrice || product.originalPrice}
               </span>
             </div>
+            <div className="absolute inset-0 flex flex-col justify-center items-center transition duration-300 bg-black bg-opacity-0 hover:bg-opacity-50"
+            style={{ pointerEvents: 'none' }}> 
+            <div className="transition duration-300 opacity-0 hover:opacity-100"
+              style={{ pointerEvents: 'auto' }}> 
+            <button className="bg-white text-[#B88E2F] border border-[#B88E2F] font-semibold w-[202px] h-[48px] px-4 py-2 mx-10 ">
+                Add to Cart
+              </button>
+              <div className="flex items-center justify-around mt-6 mx-4">
+                <img src={Share} alt="share" /><span className="text-white font-semibold">Share</span>
+                <img src={Compare} alt="share" /><span className="text-white font-semibold">Compare</span>
+                <img src={Heart} alt="share" /><span className="text-white font-semibold">Like</span>
+              </div>
+            </div>
+          </div>
           </div>
         ))}
       </div>
+     
      
     
 
