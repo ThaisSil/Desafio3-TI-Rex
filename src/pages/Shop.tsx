@@ -20,6 +20,7 @@ interface Product {
   originalPrice: string;
   discountPrice: string;
   discountPercentage: string;
+  category: string;
   isNew: string;
   image: string;
 }
@@ -27,6 +28,8 @@ interface Product {
 const Shop = () => {
   const [products, setProducts] = useState<Product[]>([]);
   const navigate = useNavigate();
+  const [openOption, setOpenOptions] = useState<boolean>(false);
+  const [filter, setFilter] = useState<string>(' ');
  
 
   useEffect(() => {
@@ -38,7 +41,23 @@ const Shop = () => {
   const handleClick = (id:number) => {
     navigate(`/SingleProduct/${id}`);
   };
-  
+
+  const handleFilterToggle = () => {
+    setOpenOptions(!openOption);
+  };
+
+  const handleCategoryChange = (category: string) => {
+    setFilter(category);
+  };
+
+  const filteredProducts = products.filter((product) => {
+    if (filter === '') return true; 
+    return product.category === filter;
+  });
+
+  const resetFilter = () => {
+    setFilter(''); 
+  }; 
   
   return (
     <div>
@@ -48,20 +67,36 @@ const Shop = () => {
       title='Shop '
       subtitle= 'Home >'
       paragraph='Shop'/>
-        <div className="bg-[#F9F1E7] h-[100px] flex flex-row items-center justify-between">
-          <div  className='flex flex-row gap-4 ml-24 mr-6'>
+        <div className="bg-[#F9F1E7] h-[100px] flex flex-row items-center pl-24">
+          <div  className='flex flex-row gap-4 mr-6 cursor-pointer' onClick={handleFilterToggle}>
         <img src={Filter} alt="Filter" />
         <p className='text-xl'>Filter</p>
         </div>
-       <div className='flex flex-row gap-6'>
+        {openOption && (
+          <div className="absolute mt-52 bg-[#F9F1E7] rounded-xl z-10">
+            <div>
+              <h3 className="font-bold">Filter by Category</h3>
+              <ul className='cursor-pointer'>
+                <li onClick={() => handleCategoryChange("chair")}>Chair</li>
+                <li onClick={() => handleCategoryChange("sofa")}>Sofa</li>
+                <li onClick={() => handleCategoryChange("table")}>Table</li>
+                <li onClick={() => handleCategoryChange("desk")}>Desk</li>
+                <li onClick={() => handleCategoryChange("bed")}>Bed</li>
+                <li onClick={resetFilter}>Show All Products</li> 
+              </ul>
+            </div>
+          </div>
+        )}
+
+       <div className='flex flex-row mx-6 gap-4'>
           <img src={Grid} alt="grid" />
           <img src={ViewList} alt="viewlist" />
           </div>
           <div className='border-l-2 border-[#9F9F9F] mr-[349px] ml-[30px] '>         
-             <input placeholder ='Showing 1–16 of 32 results'className='bg-[#F9F1E7] text-[#9F9F9F] w-[237px] h-[37px] p-8' />
+             <input placeholder ='Showing 1–16 of 32 results'className='bg-[#F9F1E7] w-[237px] h-[37px] p-8' />
              </div>
 
-          <div className='gap-8 flex flex-row items-center'>
+          <div className='gap-8 flex flex-row items-center mr-14'>
           <p>Show</p>
           <input type="text" className='text-[#9F9F9F] w-[55px] h-[55px]' />
           </div>
@@ -71,8 +106,8 @@ const Shop = () => {
           </div>
           </div>
 
-      <div className="grid grid-cols-4 gap-4">
-        {products.map((product) => (
+      <div className="grid grid-cols-4 gap-4 my-16">
+        {filteredProducts.map((product) => (
           <div key={product.id} className="cursor-pointer relative" onClick={() => handleClick(product.id)}>
             <img
               src={product.image}

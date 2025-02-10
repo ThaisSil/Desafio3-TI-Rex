@@ -9,6 +9,7 @@
         "discountPrice": "Rp 2.500.000",
         "discountPercentage": "-30%",
         "isNew": "false",
+        "category":"chair",
         "image": "https://imagens-jsonserver.s3.us-east-1.amazonaws.com/Image1.png"
     },
     {
@@ -17,6 +18,7 @@
         "description": "Stylish cafe chair",
         "originalPrice": "Rp 3.000.000",
         "isNew": "true",
+        "category":"chair",
         "image": "https://imagens-jsonserver.s3.us-east-1.amazonaws.com/Image2.png"
     },
     {
@@ -27,6 +29,7 @@
         "discountPrice": "Rp 7.000.000",
         "discountPercentage": "-50%",
         "isNew": "false",
+        "category":"chair",
         "image": "https://imagens-jsonserver.s3.us-east-1.amazonaws.com/Image3.png"
     },
     {
@@ -35,6 +38,7 @@
         "description": "Outdoor bar table and stool",
         "originalPrice": "Rp 5.000.000",
         "isNew": "true",
+        "category":"table",
         "image": "https://imagens-jsonserver.s3.us-east-1.amazonaws.com/Image4.png"
     },
     {
@@ -43,6 +47,7 @@
         "description": "Night lamp",
         "originalPrice": "Rp 200.000",
         "isNew": "false",
+        "category":"table",
         "image": "https://imagens-jsonserver.s3.us-east-1.amazonaws.com/Image5.png"
     },
     {
@@ -53,6 +58,7 @@
         "discountPrice": "Rp 1.500.000",
         "discountPercentage": "-25%",
         "isNew": "false",
+        "category":"table",
         "image": "https://imagens-jsonserver.s3.us-east-1.amazonaws.com/Image6.png"
     },
     {
@@ -61,6 +67,7 @@
         "description": "Cute bed set",
         "originalPrice": "Rp 8.000.000",
         "isNew": "true",
+        "category":"bed",
         "image": "https://imagens-jsonserver.s3.us-east-1.amazonaws.com/Image7.png"
     },
     {
@@ -69,6 +76,7 @@
         "description": "Stylish cafe chair",
         "originalPrice": "Rp 3.000.000",
         "isNew": "false",
+        "category":"chair",
         "image": "https://imagens-jsonserver.s3.us-east-1.amazonaws.com/Image8.png"
     },
     {
@@ -79,6 +87,7 @@
         "discountPrice": "Rp 500.000",
         "discountPercentage": "-50%",
         "isNew": "true",
+        "category":"table",
         "image": "https://imagens-jsonserver.s3.us-east-1.amazonaws.com/Image1.png"
     },
     {
@@ -87,6 +96,7 @@
         "description": "Outdoor bar table and stool",
         "originalPrice": "Rp 5.000.000",
         "isNew": "false",
+        "category":"table",
         "image": "https://imagens-jsonserver.s3.us-east-1.amazonaws.com/Image2.png"
     },
     {
@@ -95,6 +105,7 @@
         "description": "Night lamp",
         "originalPrice": "Rp 200.000",
         "isNew": "false",
+        "category":"bed",
         "image": "https://imagens-jsonserver.s3.us-east-1.amazonaws.com/Image3.png"
     },
     {
@@ -103,6 +114,7 @@
         "description": "Small mug",
         "originalPrice": "Rp 2.000.000",
         "isNew": "false",
+        "category":"chair",
         "image": "https://imagens-jsonserver.s3.us-east-1.amazonaws.com/Image4.png"
     },
     {
@@ -111,6 +123,7 @@
         "description": "Modern coffee table",
         "originalPrice": "Rp 4.500.000",
         "isNew": "true",
+        "category":"table",
         "image": "https://imagens-jsonserver.s3.us-east-1.amazonaws.com/Image5.png"
     },
     {
@@ -121,6 +134,7 @@
         "discountPrice": "Rp 1.200.000",
         "discountPercentage": "-20%",
         "isNew": "false",
+        "category":"desk",
         "image": "https://imagens-jsonserver.s3.us-east-1.amazonaws.com/Image6.png"
     },
     {
@@ -129,6 +143,7 @@
         "description": "Minimalist pendant light",
         "originalPrice": "Rp 1.000.000",
         "isNew": "true",
+        "category":"desk",
         "image": "https://imagens-jsonserver.s3.us-east-1.amazonaws.com/Image7.png"
     },
     {
@@ -137,6 +152,7 @@
         "description": "Soft armchair",
         "originalPrice": "Rp 1.200.000",
         "isNew": "false",
+        "category":"sofa",
         "image": "https://imagens-jsonserver.s3.us-east-1.amazonaws.com/Image8.png"
     },
     {
@@ -145,6 +161,7 @@
         "description": "Elegant side table",
         "originalPrice": "Rp 500.000",
         "isNew": "true",
+        "category":"table",
         "image": "https://imagens-jsonserver.s3.us-east-1.amazonaws.com/Image1.png"
     },
     {
@@ -153,6 +170,7 @@
         "description": "LED floor lamp",
         "originalPrice": "Rp 8.000.000",
         "isNew": "false",
+        "category":"desk",
         "image": "https://imagens-jsonserver.s3.us-east-1.amazonaws.com/Image2.png"
     },
     {
@@ -163,6 +181,7 @@
         "discountPrice": "Rp 4.500.000",
         "discountPercentage": "-10%",
         "isNew": "true",
+        "category":"sofa",
         "image": "https://imagens-jsonserver.s3.us-east-1.amazonaws.com/Image3.png"
     },
     {
@@ -171,6 +190,7 @@
         "description": "Minimalist desk",
         "originalPrice": "Rp 4.000.000",
         "isNew": "false",
+        "category":"desk",
         "image": "https://imagens-jsonserver.s3.us-east-1.amazonaws.com/Image4.png"
     },
     {
@@ -179,6 +199,7 @@
         "description": "Modern chair",
         "originalPrice": "Rp 3.000.000",
         "isNew": "true",
+        "category":"chair",
         "image": "https://imagens-jsonserver.s3.us-east-1.amazonaws.com/Image5.png"
     },
     {
@@ -187,6 +208,7 @@
         "description": "Contemporary table lamp",
         "originalPrice": "Rp 1.500.000",
         "isNew": "false",
+        "category":"table",
         "image": "https://imagens-jsonserver.s3.us-east-1.amazonaws.com/Image6.png"
     },
     {
@@ -195,6 +217,7 @@
         "description": "Stylish bookshelf",
         "originalPrice": "Rp 2.500.000",
         "isNew": "true",
+        "category":"sofa",
         "image": "https://imagens-jsonserver.s3.us-east-1.amazonaws.com/Image7.png"
     },
     {
@@ -203,6 +226,7 @@
         "description": "Modern armchair",
         "originalPrice": "Rp 2.000.000",
         "isNew": "false",
+        "category":"sofa",
         "image": "https://imagens-jsonserver.s3.us-east-1.amazonaws.com/Image8.png"
     }
     ]
