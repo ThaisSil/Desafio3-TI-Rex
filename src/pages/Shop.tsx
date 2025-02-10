@@ -53,7 +53,7 @@ const Shop = () => {
         <img src={Filter} alt="Filter" />
         <p className='text-xl'>Filter</p>
         </div>
-        <div className='flex flex-row gap-6'>
+       <div className='flex flex-row gap-6'>
           <img src={Grid} alt="grid" />
           <img src={ViewList} alt="viewlist" />
           </div>
