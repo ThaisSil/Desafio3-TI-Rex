@@ -38,8 +38,9 @@ const ContactLayout = () => {
                 Saturday-Sunday: 9:00 - 21:00</p>
             </div>
         </div>
-            <ContactForm />
-
+        
+        <ContactForm />
+        
         </div>
       
     </div>

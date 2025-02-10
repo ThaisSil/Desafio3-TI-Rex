@@ -3,8 +3,8 @@ import Banner from '../components/Banner'
 import BgBanner from '../assets/images/BgBanner.png'
 import Warranty from '../components/Warranty'
 import Footer from '../components/Footer'
-//import ContactForm from '../components/ContactForm'
 import ContactLayout from '../layout/ContactLayout'
+
 
 const Contact = () => {
   return (
@@ -16,6 +16,7 @@ const Contact = () => {
       subtitle= 'Home >'
       paragraph='Contact'/>
       <ContactLayout />
+      
     
       <Warranty />
       <Footer />
