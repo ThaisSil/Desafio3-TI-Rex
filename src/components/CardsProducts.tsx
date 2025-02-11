@@ -3,17 +3,8 @@ import { useLocation, useNavigate } from "react-router-dom";
 import Share from '../assets/images/Share.png';
 import Compare from '../assets/images/Compare.png';
 import Heart from '../assets/images/Heart.png';
+import { Product } from "../types/product";
 
-interface Product {
-  id: number;
-  name: string;
-  description: string;
-  originalPrice: string;
-  discountPrice: string;
-  discountPercentage: string;
-  isNew: string;
-  image: string;
-}
 
 const CardsProducts = () => {
   const [products, setProducts] = useState<Product[]>([]);

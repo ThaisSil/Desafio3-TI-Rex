@@ -1,4 +1,3 @@
-import React from 'react'
 import Trophy from '../assets/images/trophy 1.png';
 import Guarantee from '../assets/images/guarantee.png';
 import Shipping from '../assets/images/shipping.png';

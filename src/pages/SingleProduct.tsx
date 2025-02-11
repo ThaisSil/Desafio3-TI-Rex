@@ -2,23 +2,15 @@ import React, { useEffect, useState } from "react";
 import CardsProducts from "../components/CardsProducts";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import Product from "./Product";
 import { useParams } from "react-router-dom";
 import Stars from "../assets/images/Group 88.png";
 import QuantitySelector from "../components/QuantitySelector";
 import Sofa from "../assets/images/Sofa.png";
 import Diva from "../assets/images/Diva.png";
+import { Product } from "../types/product";
 
-interface Product {
-  id: number;
-  name: string;
-  description: string;
-  originalPrice: string;
-  discountPrice: string;
-  discountPercentage: string;
-  isNew: string;
-  image: string;
-}
+
+
 
 const SingleProduct = () => {
   const { id } = useParams<{ id: string }>();
