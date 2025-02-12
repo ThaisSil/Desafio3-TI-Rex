@@ -10,4 +10,7 @@ export interface Product {
     category: string;
     isNew: string;
     image: string;
+    price: number;
+    quantity: number;
+
   }

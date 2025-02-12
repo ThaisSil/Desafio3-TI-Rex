@@ -5,7 +5,11 @@ import { zodResolver } from "@hookform/resolvers/zod";
 
 const schema = z.object({
   name: z.string().min(3, { message: "Name must be at least 3 characters" }),
-  email: z.string().min(3, { message: "Please enter a valid email address" }),
+  email: z.string().min(3, { message: "Please enter a valid email address" })
+  .regex(
+    /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
+    { message: "Please enter a valid email address with @" }
+  ),
   subject: z
     .string()
     .min(3, { message: "Subject must be at least 3 characters" }),
@@ -31,7 +35,7 @@ const ContactForm: React.FC = () => {
 
   return (
     <div >
-      <form onSubmit={handleSubmit(onSubmit)} className="mx-[52px] mt-16">
+      <form noValidate onSubmit={handleSubmit(onSubmit)} className="mx-[52px] mt-16">
         <div>
           <div className="font-medium py-[22px]">
             <label htmlFor="name">Your Name</label>

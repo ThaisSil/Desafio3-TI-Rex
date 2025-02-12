@@ -5,6 +5,7 @@ import Contact from './pages/Contact';
 import Cart from './pages/Cart';
 import Login from './pages/Login';
 import SingleProduct from './pages/SingleProduct';
+import Checkout from './pages/Checkout';
 
 
 
@@ -20,6 +21,7 @@ function AppRoutes () {
             <Route path='/Cart' element={<Cart />} />
             <Route path='/Login' element={<Login />} />
             <Route path='/SingleProduct/:id' element={<SingleProduct/>} />
+            <Route path= '/Checkout' element={<Checkout/>} />
 
         </Routes>
     );

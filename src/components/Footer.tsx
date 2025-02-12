@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import Facebook from '../assets/images/Facebook.png';
 import Instagram from '../assets/images/Instagram.png';
 import Twiter from '../assets/images/Twiter.png';
@@ -8,6 +9,35 @@ import Linkedin from '../assets/images/Linkedin.png';
 
 
 const Footer = () => {
+  const [email, setEmail] = useState('');
+  const [error, setError] = useState('');
+
+  
+  interface ValidateEmail {
+    (email: string): boolean;
+  }
+
+  const validateEmail: ValidateEmail = (email) => {
+    const regex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    return regex.test(email);
+  };
+
+  
+  interface HandleSubscribeEvent extends React.FormEvent<HTMLFormElement> {}
+
+  const handleSubscribe = (e: HandleSubscribeEvent): void => {
+    e.preventDefault();
+
+    if (validateEmail(email)) {
+      localStorage.setItem('subscriberEmail', email);
+
+      setEmail('');
+      setError('');
+    } else {
+      setError('Please enter a valid email address.');
+    }
+  };
+
   return (
     <footer className='border-t-2 border-gray-300 mt-12'>
     <div className='container mx-auto px-4 '>
@@ -43,13 +73,14 @@ const Footer = () => {
             <div className='text-black py-11'>Privacy Police</div>
         </div>
         </div>
-        <div>
+        <form noValidate onSubmit={handleSubscribe}>
             <p className='text-[#9F9F9F] font-medium'>Newsletter</p>
             <div className='flex items-center space-x-2 mt-9 '>
-            <input type="email" placeholder='Enter Your Email Address' className=" text-sm border-b-2 border-black w-[200px]"/>
-            <button className=" text-black border-b-2 border-black text-sm font-medium w-[75px]">SUBSCRIBE</button>
+            <input type="email" placeholder='Enter Your Email Address' value={email}  onChange={(e) => setEmail(e.target.value)} className=" text-sm border-b-2 border-black w-[200px]"/>
+            <button type='submit' className=" text-black border-b-2 border-black text-sm font-medium w-[75px]">SUBSCRIBE</button>
         </div>
-        </div>
+        {error && <p className="text-red-500 mt-2">{error}</p>}
+        </form>
         </div>
       </div>
       </div>

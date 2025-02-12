@@ -20,7 +20,7 @@ import { Product } from '../types/product';
 const Shop = () => {
   const [products, setProducts] = useState<Product[]>([]);
   const [currentPage, setCurrentPage] = useState<number>(1);
-  const [filter, setFilter] = useState<string>(' ');
+  const [filter, setFilter] = useState<string>('all');
   const [itemsPerPage] = useState<number>(16); 
   const navigate = useNavigate();
   const [openOption, setOpenOptions] = useState<boolean>(false);
@@ -48,10 +48,10 @@ const Shop = () => {
   const resetFilter = () => {
     setFilter(''); 
   }; 
+ 
 
-  const filteredProducts = filter
-  ? products.filter((product) => product.category === filter)
-  : products;
+  const filteredProducts = filter ==='all'  ? products: products.filter (prod => prod.category === filter);
+
 
   const indexOfLastProduct = currentPage * itemsPerPage;
   const indexOfFirstProduct = indexOfLastProduct - itemsPerPage;
@@ -85,6 +85,7 @@ const Shop = () => {
             <div>
               <h3 className="font-bold">Filter by Category</h3>
               <ul className='cursor-pointer'>
+                <li onClick={()=> handleCategoryChange ("all")}>All</li>
                 <li onClick={() => handleCategoryChange("chair")}>Chair</li>
                 <li onClick={() => handleCategoryChange("sofa")}>Sofa</li>
                 <li onClick={() => handleCategoryChange("table")}>Table</li>
@@ -107,7 +108,7 @@ const Shop = () => {
 <div className='border-l-2 border-[#9F9F9F] mx-[30px]'>
   <input
     value={filter ? 
-      `Filtering by: ${filter.charAt(0).toUpperCase() + filter.slice(1)} - Showing ${indexOfFirstProduct + 1}–${indexOfLastProduct} of ${filteredProducts.length} results`
+    ` Showing ${indexOfFirstProduct + 1}–${indexOfLastProduct} of ${filteredProducts.length} results`
       : 
       `Showing ${indexOfFirstProduct + 1}–${indexOfLastProduct} of ${filteredProducts.length} results`}
     className='bg-[#F9F1E7] w-[400px] h-[37px] p-4'
@@ -122,7 +123,7 @@ const Shop = () => {
         </div>
         <div className='gap-8 flex flex-row items-center'>
           <p>Short by</p>
-          <input type="text" className='text-[#9F9F9F] w-[188px] h-[55px] mr-[100px]' />
+          <input type="text" className='text-[#9F9F9F] w-[188px] h-[55px] mr-[100px] pl-2 capitalize'  value={filter} />
         </div>
       </div>
 
