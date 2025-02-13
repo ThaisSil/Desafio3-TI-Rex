@@ -6,14 +6,15 @@ import Cart from './pages/Cart';
 import Login from './pages/Login';
 import SingleProduct from './pages/SingleProduct';
 import Checkout from './pages/Checkout';
-
-
+import PrivateRoute from './components/PrivateRoute';
+import { AuthProvider } from './context/AuthContext';
 
 
 
 
 function AppRoutes () {
     return (
+        <AuthProvider>
         <Routes>
             <Route path='/' element={<Home />} />
             <Route path='/Shop' element={<Shop />} />
@@ -21,9 +22,10 @@ function AppRoutes () {
             <Route path='/Cart' element={<Cart />} />
             <Route path='/Login' element={<Login />} />
             <Route path='/SingleProduct/:id' element={<SingleProduct/>} />
-            <Route path= '/Checkout' element={<Checkout/>} />
+            <Route path="/Checkout" element={<PrivateRoute element={<Checkout />} path="/Checkout" />} />
 
         </Routes>
+        </AuthProvider>
     );
 }
 

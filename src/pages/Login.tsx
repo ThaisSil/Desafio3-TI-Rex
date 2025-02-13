@@ -2,11 +2,11 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Banner from "../components/Banner";
 import BgBanner from "../assets/images/BgBanner.png";
-import Dining from '../assets/images/Dining.png'
 import React from "react";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { useNavigate } from "react-router-dom";
 
 const schema = z.object({
   name: z.string().min(3, { message: "Name must be at least 3 characters" }),
@@ -21,6 +21,7 @@ const schema = z.object({
 type FormSchema = z.infer<typeof schema>;
 
 const LoginPage: React.FC = () => {
+  const navigate = useNavigate();
   const {
     register,
     handleSubmit,
@@ -30,8 +31,17 @@ const LoginPage: React.FC = () => {
   });
 
   const onSubmit = (data: FormSchema) => {
-    console.log(data);
+      const userData = { name: data.name, email: data.email };
+        localStorage.setItem("user", JSON.stringify(userData));
+        navigate ('/Checkout')
   };
+
+  const logout = () => {
+      localStorage.removeItem("user");
+      navigate ('/Login'); 
+  };
+  
+  
 
   return (
     <div>
