@@ -42,11 +42,12 @@ const LoginPage: React.FC = () => {
         subtitle="Home >"
         paragraph="Login"
       />
-       <div className="grid grid-cols-2">
+      <div className="flex flex-col items-center mt-4">
+        <h1 className="font-semibold text-2xl">Sign in to your account</h1>
       <form
         noValidate
         onSubmit={handleSubmit(onSubmit)}
-        className="mx-[52px] mt-16"
+        
       >
         <div>
           <div className="font-medium py-[22px]">
@@ -57,7 +58,7 @@ const LoginPage: React.FC = () => {
             id="name"
             placeholder="Abc"
             {...register("name")}
-            className="rounded-lg text-gray-500 w-[528px] h-[75px] border border-gray-500 p-4"
+            className="rounded-2xl text-gray-500 w-[340px] h-[44px] border border-gray-500 p-3"
           />
           <p>
             {errors.name && (
@@ -73,7 +74,7 @@ const LoginPage: React.FC = () => {
             id="email"
             placeholder="abc@def.com"
             {...register("email")}
-            className="rounded-lg text-gray-500 w-[528px] h-[75px] border border-gray-500 p-4"
+            className="rounded-2xl text-gray-500 w-[340px] h-[44px] border border-gray-500 p-3"
           />
           <p>
             {errors.email && (
@@ -83,16 +84,19 @@ const LoginPage: React.FC = () => {
         </div>
         <button
           type="submit"
-          className="text-white bg-[#B88E2F] w-[237px] h-[55px] gap-[10px] mt-[46px] rounded-md"
+          className="text-white bg-[#B88E2F] w-[340px] h-[44px] gap-[10px] mt-[46px] rounded-2xl"
         >
-          Submit
+          Access account
         </button>
       </form>
-     
-        <img src={Dining} alt="Dining" />
-      </div>
+      <p className="font-medium m-4">Or sign in with</p>
+    <div className="flex flex-row gap-6">
+    <button type="submit" className="w-32 h-12 gap-10 rounded-2xl border border-gray-500">Google</button>
+    <button type="submit" className="w-32 h-12 gap-10 rounded-2xl border border-gray-500">Facebook</button>
+    </div>
+    </div>
 
-      <Footer />
+     <Footer />
     </div>
   );
 };
