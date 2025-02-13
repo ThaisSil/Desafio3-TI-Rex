@@ -4,20 +4,23 @@ import Share from '../assets/images/Share.png';
 import Compare from '../assets/images/Compare.png';
 import Heart from '../assets/images/Heart.png';
 import { Product } from "../types/product";
+import { useCart } from "../context/CartContext";
+
 
 
 const CardsProducts = () => {
-  const [products, setProducts] = useState<Product[]>([]);
+  const [product, setProduct] = useState<Product[]>([]);
   const [visibleProducts, setVisibleProducts] = useState(8);
   const navigate = useNavigate();
   const location = useLocation();
+   const { addToCart } = useCart();
 
   useEffect(() => {
     fetch(" http://localhost:3000/products")
       .then((response) => response.json())
-      .then((data) => setProducts(data));
+      .then((data) => setProduct(data));
 
-    if (location.pathname === "/SingleProduct") {
+    if (location.pathname === "/SingleProduct/:id") {
       setVisibleProducts(4);
     } else {
       setVisibleProducts(8);
@@ -28,6 +31,14 @@ const CardsProducts = () => {
     navigate(`/SingleProduct/${id}`);
   };
 
+  const handleAddToCart = (product: Product) => {
+    if (product) {
+      addToCart({ ...product, quantity:1});
+      navigate("/Cart");
+    }
+  };
+if (!product) return <div>Carregando...</div>;
+
   const handleShowMore = () => {
     setVisibleProducts(visibleProducts + 4);
   };
@@ -35,16 +46,17 @@ const CardsProducts = () => {
 
   return (
     <div className="grid grid-cols-4 gap-4 mx-[100px] my-20">
-      {products.slice(0, visibleProducts).map((product) => (
+      {product.slice(0, visibleProducts).map((product) => (
         <div
           key={product.id}
           className="cursor-pointer relative"
-          onClick={() => handleClick(product.id)}
+         
         >
            <div className="relative">
             <img
               src={product.image}
               alt={product.name}
+              onClick={() => handleClick(product.id)}
               className="w-[285px] h-[301px] object-cover transition duration-300"
             />
             <div className="absolute inset-0 bg-black bg-opacity-0 hover:bg-opacity-50 transition duration-300"
@@ -82,7 +94,8 @@ const CardsProducts = () => {
             style={{ pointerEvents: 'none' }}> 
             <div className="transition duration-300 opacity-0 hover:opacity-100"
               style={{ pointerEvents: 'auto' }}> 
-            <button className="bg-white text-[#B88E2F] border border-[#B88E2F] font-semibold w-[202px] h-[48px] px-4 py-2 mx-10 ">
+            <button onClick={() => handleAddToCart(product)}
+            className="bg-white text-[#B88E2F] border border-[#B88E2F] font-semibold w-[202px] h-[48px] px-4 py-2 mx-10 ">
                 Add to Cart
               </button>
               <div className="flex items-center justify-around mt-6 mx-4">

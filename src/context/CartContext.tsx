@@ -2,9 +2,10 @@ import React, { createContext, useContext, useState, useEffect } from 'react';
 
 
 interface Product {
+    image: string | undefined;
     id: number;
     name: string;
-    price: number;
+    originalprice: number;
     quantity: number;
   }
   

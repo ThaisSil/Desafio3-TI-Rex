@@ -5,21 +5,22 @@ interface CartItemProps {
   product: {
     id: number;
     name: string;
-    price: number;
+    originalPrice: number;
     quantity: number;
+    image: string;
   };
 }
 
 const CartItem: React.FC<CartItemProps> = ({ product }) => {
   const { increaseQuantity, decreaseQuantity, removeFromCart } = useCart();
 
-  const subtotal = product.price * product.quantity;
+  const subtotal = product.originalPrice * product.quantity;
 
   return (
     <div className="flex justify-between items-center p-4 border-b border-gray-200">
       <div>
         <h3 className="font-bold">{product.name}</h3>
-        <p>R${product.price.toFixed(2)}</p>
+        <p>R${product.originalPrice.toFixed(2)}</p>
       </div>
       <div className="flex items-center">
         <button

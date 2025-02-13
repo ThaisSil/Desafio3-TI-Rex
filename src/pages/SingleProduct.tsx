@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import CardsProducts from "../components/CardsProducts";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import Stars from "../assets/images/Group 88.png";
 import QuantitySelector from "../components/QuantitySelector";
 import Sofa from "../assets/images/Sofa.png";
@@ -14,13 +14,14 @@ import { Product } from "../types/product";
 
 const SingleProduct = () => {
   const { id } = useParams<{ id: string }>();
+  console.log(id);
   const [product, setProduct] = useState<Product | null>(null);
 
   useEffect(() => {
     fetch(`http://localhost:3000/products/${id}`)
       .then((response) => response.json())
       .then((data) => setProduct(data));
-  }, []);
+  }, [id]);
 
   return (
     <div>
@@ -28,10 +29,10 @@ const SingleProduct = () => {
       <div className="bg-[#F9F1E7] h-[100px] flex flex-row items-center">
         <div className="flex flex-row gap-4 ml-24 mr-6">
           <p className="text-[#9F9F9F] px-5">
-            Home <span className="text-black px-5">{">"}</span>
+           <Link to='/'>Home</Link><span className="text-black px-5">{">"}</span> 
           </p>
           <p className="text-[#9F9F9F] px-5">
-            Shop <span className="text-black px-5">{">"}</span>
+          <Link to= '/Shop'>Shop</Link><span className="text-black px-5">{">"}</span>
           </p>
         </div>
         <div className="border-l-2 border-[#9F9F9F] ">

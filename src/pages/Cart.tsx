@@ -6,29 +6,42 @@ import BgBanner from "../assets/images/BgBanner.png";
 import Warranty from "../components/Warranty";
 import Delete from "../assets/images/Delete.png";
 import { Product } from "../types/product";
+import { useCart } from "../context/CartContext";
+
+
 
 const Cart = () => {
   const { id } = useParams<{ id: string }>();
   const [product, setProduct] = useState<Product | null>(null);
-  const [quantity, setQuantity] = useState(1);
+  const { cart } = useCart();
   const navigate = useNavigate();
+  const { increaseQuantity, decreaseQuantity, removeFromCart } = useCart();
+
+  
+  
 
   useEffect(() => {
-    fetch(`http://localhost:3000/products/${id}`)
+    fetch(`http://localhost:3000/products/`)
       .then((response) => response.json())
       .then((data) => setProduct(data));
-  }, []);
+  }, [id]);
 
-  const increase = () => setQuantity(quantity + 1);
-  const decrease = () => {
-    if (quantity > 1) {
-      setQuantity(quantity - 1);
-    }
-  };
 
   const handleCheckout = () => {
     navigate("/Checkout");
   };
+
+  const calculateTotal = () => {
+    return cart.reduce((total, item) => {
+      const itemSubtotal = (product?.originalPrice ?? 0) * (product?.quantity ?? 0);
+      return total + itemSubtotal;
+    }, 0);
+  };
+
+  const total = calculateTotal();
+
+
+
 
   return (
     <div>
@@ -41,7 +54,7 @@ const Cart = () => {
       />
       <div className="container mx-auto p-4">
         <div className="flex flex-row justify-between mt-20">
-          <table className="table-auto border-collapse">
+          <table className=" w-full h-auto table-auto border-collapse">
             <thead>
               <tr className="font-medium border-b bg-[#F9F1E7] ">
                 <th className="px-4 py-2 text-left">Product</th>
@@ -52,42 +65,47 @@ const Cart = () => {
               </tr>
             </thead>
             <tbody>
-              <tr className="border-b">
+              {cart.map((item) => (                
+              <tr key={item.id} className="border-b">
                 <td className="px-4 py-2 flex items-center">
                   <img
-                    src={product?.image}
-                    alt={product?.name}
+                    src={item.image}
+                    alt={item.name}
                     className="w-16 h-16 mr-4"
                   />
-                  <span className="text-[##9F9F9F]">{product?.name}</span>
+                  <span className="text-[##9F9F9F]">{item.name}</span>
                 </td>
                 <td className="px-4 py-2 text-[##9F9F9F]">
-                  {product?.originalPrice}
+                  {item.originalprice}
                 </td>
                 <td className="px-4 py-2 flex items-center border-2 rounded-xl border-[#9F9F9F] w-[107px]">
                   <button
-                    onClick={decrease}
+                     onClick={() => decreaseQuantity(item.id)}
                     className="text-black w-10 h-10 flex items-center justify-center"
                   >
                     -
                   </button>
-                  <span className="text-xl font-medium mx-2">{quantity}</span>
+                  <span className="text-xl font-medium mx-2">{item.quantity}</span>
                   <button
-                    onClick={increase}
+                    onClick={() => increaseQuantity(item.id)}
                     className="text-black w-10 h-10 flex items-center justify-center"
                   >
                     +
                   </button>
                 </td>
-                <td className="px-4 py-2">R$ 250.000,00</td>
+                <td className="px-4 py-2"> {(item.originalprice * item.quantity).toFixed(2)}</td>
                 <td className="px-4 py-2">
                   <img
                     src={Delete}
                     alt="delete"
-                    className="w-6 h-6 cursor-pointer"
+                    className="cursor-pointer"
+                    data-id={item.id}
+                    onClick={() => removeFromCart(item.id)}
+                
                   />
                 </td>
               </tr>
+                    ))}
             </tbody>
           </table>
 
@@ -98,11 +116,11 @@ const Cart = () => {
             <div className="mb-4">
               <div className="flex justify-between mb-8">
                 <span className="font-bold ">Subtotal</span>
-                <span>Rs. 250.000,00</span>
+                <span>{(product?.originalPrice ?? 0) * (product?.quantity ?? 0)}</span>
               </div>
               <div className="flex justify-between">
                 <span className="font-bold">Total</span>
-                <span className="text-[#B88E2F]">Rs. 250.000,00</span>
+                <span className="text-[#B88E2F]">{total.toFixed(2)}</span>
               </div>
               <button
                 onClick={handleCheckout}
