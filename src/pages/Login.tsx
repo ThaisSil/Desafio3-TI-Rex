@@ -7,6 +7,7 @@ import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useNavigate } from "react-router-dom";
+import { useAuth } from "../context/AuthContext";
 
 const schema = z.object({
   name: z.string().min(3, { message: "Name must be at least 3 characters" }),
@@ -21,6 +22,7 @@ const schema = z.object({
 type FormSchema = z.infer<typeof schema>;
 
 const LoginPage: React.FC = () => {
+  const {login} = useAuth();
   const navigate = useNavigate();
   const {
     register,
@@ -33,9 +35,10 @@ const LoginPage: React.FC = () => {
   const onSubmit = (data: FormSchema) => {
       const userData = { name: data.name, email: data.email };
         localStorage.setItem("user", JSON.stringify(userData));
-        navigate ('/Checkout')
+   
+   login("AuthToken");
   };
-
+  
   const logout = () => {
       localStorage.removeItem("user");
       navigate ('/Login'); 

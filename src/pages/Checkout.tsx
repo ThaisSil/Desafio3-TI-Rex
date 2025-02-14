@@ -1,12 +1,25 @@
-import React from "react";
+import React, { useState } from "react";
 import Header from "../components/Header";
 import Banner from "../components/Banner";
 import BgBanner from "../assets/images/BgBanner.png";
 import Warranty from "../components/Warranty";
 import Footer from "../components/Footer";
 import CheckoutForm from "../components/CheckoutForm";
+import { useCart } from "../context/CartContext";
+
+
+
+
 
 const Checkout = () => {
+  console.log ("chekout components");
+   const { cart } = useCart();
+
+  const subtotal = cart.reduce((acc, item) => acc + item.originalPrice * item.quantity, 0);
+  const total = subtotal
+
+
+  
   return (
     <div>
       <Header />
@@ -21,20 +34,23 @@ const Checkout = () => {
         <div>
         <div className="grid grid-cols-2">
           <div className="my-14 p-9">
-            <p className="font-medium text-2xl py-4">Product</p>
-            <p className="text-[#9F9F9F] py-4">
-             nomproduto
-              <span className="text-xs text-black">x quant.prod</span>
-            </p>
+            <p className="font-medium text-2xl py-5">Product</p>
+           { cart.map((item) => (
+              <p className="text-[#9F9F9F] py-4" key={item.id}> <span className=" pr-2">{item.name}</span>
+              <span className="text-xs text-black">x {item.quantity}</span>
+             </p>
+
+           ))}
+            
             <p className="py-4"> Subtotal</p>
             <p className="py-4">Total</p>
           </div>
           <div className="my-14 p-16">
-            <p className="font-medium text-2xl py-4">Subtotal</p>
-            <p className="py-4"> preço do produto </p>
-            <p className="py-4"> preço subtotal</p>
+            <p className="font-medium text-2xl">Subtotal</p>
+            <p className="py-4"> {`R$ ${subtotal.toFixed(2)}`} </p>
+            <p className="py-4"> {`R$ ${subtotal.toFixed(2)}`}</p>
             <p className="font-bold text-2xl text-[#B88E2F] py-4">
-              preço total
+            {`R$ ${total.toFixed(2)}`}
             </p>
           </div>
           </div>

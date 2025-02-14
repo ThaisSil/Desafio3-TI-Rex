@@ -23,8 +23,10 @@ const Shop = () => {
   const [openOption, setOpenOptions] = useState<boolean>(false);
   const { addToCart } = useCart();
 
+
+
   useEffect(() => {
-    fetch("http://localhost:3000/products")
+      fetch("http://localhost:3000/products")
       .then((response) => response.json())
       .then((data) => setProduct(data));
   }, []);
@@ -35,7 +37,7 @@ const Shop = () => {
 
   const handleAddToCart = (product: Product) => {
       if (product) {
-        addToCart({ ...product, quantity:1});
+        addToCart({ ...product, originalPrice: product.originalPrice, quantity:1});
         navigate("/Cart");
       }
     };
@@ -114,7 +116,7 @@ const Shop = () => {
 
         <div className="border-l-2 border-[#9F9F9F] mx-[30px]">
           <input
-            value={
+            defaultValue={
               filter
                 ? ` Showing ${
                     indexOfFirstProduct + 1
@@ -137,7 +139,7 @@ const Shop = () => {
           <input
             type="text"
             className="text-[#9F9F9F] w-[188px] h-[55px] mr-[100px] pl-2 capitalize"
-            value={filter}
+            defaultValue={filter}
           />
         </div>
       </div>
@@ -158,10 +160,10 @@ const Shop = () => {
             {product.discountPercentage &&
               product.discountPrice !== product.originalPrice && (
                 <div className="flex items-center justify-center bg-[#E97171] text-white rounded-full w-[48px] h-[48px] absolute top-2 left-2 ">
-                  <span className="text-sm">{product.discountPercentage}</span>
+                  <span className="text-sm">{product.discountPercentage} %</span>
                 </div>
               )}
-            {product.isNew === "true" && (
+            {product.isNew === true && (
               <div className="flex items-center justify-center bg-[#2EC1AC] text-white rounded-full w-[48px] h-[48px] absolute top-2 left-2">
                 <span className="text-sm">New</span>
               </div>

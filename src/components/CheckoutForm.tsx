@@ -42,24 +42,30 @@ return (
          <form noValidate onSubmit={handleSubmit(onSubmit)} className="my-14 p-16">
             <h3 className="text-4xl font-semibold">Billing details</h3>
             <div >
+              
          <div className="font-medium py-[22px]">
             <label htmlFor="name">First Name</label>
           </div>
+          <div className=" flex flex-row gap-3">
           <input
             type="text"
             id="name"
             {...register("firstName")}
          className="rounded-lg text-[#9F9F9F] w-[211px] h-[75px] border border-[#9F9F9F] p-4"
           />
+          
        <div className="font-medium py-[22px]">
             <label htmlFor="name">Last Name</label>
           </div>
+          
           <input
             type="text"
             id="name"
             {...register("lastName")}
          className="rounded-lg text-[#9F9F9F] w-[211px] h-[75px] border border-[#9F9F9F] p-4"
           />
+          
+          </div>
           </div>
 
       <div className="flex flex-col">

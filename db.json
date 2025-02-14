@@ -1,233 +1,270 @@
 {
-
-    "products": [
-    {
-        "id": 1,
-        "name": "Syltherine",
-        "description": "Stylish cafe chair",
-        "originalPrice": "Rp 3.500.000",
-        "discountPrice": "Rp 2.500.000",
-        "discountPercentage": "-30%",
-        "isNew": "false",
-        "category":"chair",
-        "image": "https://imagens-jsonserver.s3.us-east-1.amazonaws.com/Image1.png"
-    },
-    {
-        "id": 2,
-        "name": "Leviosa",
-        "description": "Stylish cafe chair",
-        "originalPrice": "Rp 3.000.000",
-        "isNew": "true",
-        "category":"chair",
-        "image": "https://imagens-jsonserver.s3.us-east-1.amazonaws.com/Image2.png"
-    },
-    {
-        "id": 3,
-        "name": "Lolito",
-        "description": "Stylish cafe chair",
-        "originalPrice": "Rp 14.000.000",
-        "discountPrice": "Rp 7.000.000",
-        "discountPercentage": "-50%",
-        "isNew": "false",
-        "category":"chair",
-        "image": "https://imagens-jsonserver.s3.us-east-1.amazonaws.com/Image3.png"
-    },
-    {
-        "id": 4,
-        "name": "Respira",
-        "description": "Outdoor bar table and stool",
-        "originalPrice": "Rp 5.000.000",
-        "isNew": "true",
-        "category":"table",
-        "image": "https://imagens-jsonserver.s3.us-east-1.amazonaws.com/Image4.png"
-    },
-    {
-        "id": 5,
-        "name": "Grifo",
-        "description": "Night lamp",
-        "originalPrice": "Rp 200.000",
-        "isNew": "false",
-        "category":"table",
-        "image": "https://imagens-jsonserver.s3.us-east-1.amazonaws.com/Image5.png"
-    },
-    {
-        "id": 6,
-        "name": "Muggo",
-        "description": "Small mug",
-        "originalPrice": "Rp 2.000.000",
-        "discountPrice": "Rp 1.500.000",
-        "discountPercentage": "-25%",
-        "isNew": "false",
-        "category":"table",
-        "image": "https://imagens-jsonserver.s3.us-east-1.amazonaws.com/Image6.png"
-    },
-    {
-        "id": 7,
-        "name": "Pingky",
-        "description": "Cute bed set",
-        "originalPrice": "Rp 8.000.000",
-        "isNew": "true",
-        "category":"bed",
-        "image": "https://imagens-jsonserver.s3.us-east-1.amazonaws.com/Image7.png"
-    },
-    {
-        "id": 8,
-        "name": "Leviosa",
-        "description": "Stylish cafe chair",
-        "originalPrice": "Rp 3.000.000",
-        "isNew": "false",
-        "category":"chair",
-        "image": "https://imagens-jsonserver.s3.us-east-1.amazonaws.com/Image8.png"
-    },
-    {
-        "id": 9,
-        "name": "Potty",
-        "description": "Minimalist flower pot",
-        "originalPrice": "Rp 1.000.000",
-        "discountPrice": "Rp 500.000",
-        "discountPercentage": "-50%",
-        "isNew": "true",
-        "category":"table",
-        "image": "https://imagens-jsonserver.s3.us-east-1.amazonaws.com/Image1.png"
-    },
-    {
-        "id": 10,
-        "name": "Respira",
-        "description": "Outdoor bar table and stool",
-        "originalPrice": "Rp 5.000.000",
-        "isNew": "false",
-        "category":"table",
-        "image": "https://imagens-jsonserver.s3.us-east-1.amazonaws.com/Image2.png"
-    },
-    {
-        "id": 11,
-        "name": "Grifo",
-        "description": "Night lamp",
-        "originalPrice": "Rp 200.000",
-        "isNew": "false",
-        "category":"bed",
-        "image": "https://imagens-jsonserver.s3.us-east-1.amazonaws.com/Image3.png"
-    },
-    {
-        "id": 12,
-        "name": "Muggo",
-        "description": "Small mug",
-        "originalPrice": "Rp 2.000.000",
-        "isNew": "false",
-        "category":"chair",
-        "image": "https://imagens-jsonserver.s3.us-east-1.amazonaws.com/Image4.png"
-    },
-    {
-        "id": 13,
-        "name": "Arka",
-        "description": "Modern coffee table",
-        "originalPrice": "Rp 4.500.000",
-        "isNew": "true",
-        "category":"table",
-        "image": "https://imagens-jsonserver.s3.us-east-1.amazonaws.com/Image5.png"
-    },
-    {
-        "id": 14,
-        "name": "EcoShade",
-        "description": "Sustainable desk lamp",
-        "originalPrice": "Rp 1.500.000",
-        "discountPrice": "Rp 1.200.000",
-        "discountPercentage": "-20%",
-        "isNew": "false",
-        "category":"desk",
-        "image": "https://imagens-jsonserver.s3.us-east-1.amazonaws.com/Image6.png"
-    },
-    {
-        "id": 15,
-        "name": "Luna",
-        "description": "Minimalist pendant light",
-        "originalPrice": "Rp 1.000.000",
-        "isNew": "true",
-        "category":"desk",
-        "image": "https://imagens-jsonserver.s3.us-east-1.amazonaws.com/Image7.png"
-    },
-    {
-        "id": 16,
-        "name": "Comodo",
-        "description": "Soft armchair",
-        "originalPrice": "Rp 1.200.000",
-        "isNew": "false",
-        "category":"sofa",
-        "image": "https://imagens-jsonserver.s3.us-east-1.amazonaws.com/Image8.png"
-    },
-    {
-        "id": 17,
-        "name": "Verta",
-        "description": "Elegant side table",
-        "originalPrice": "Rp 500.000",
-        "isNew": "true",
-        "category":"table",
-        "image": "https://imagens-jsonserver.s3.us-east-1.amazonaws.com/Image1.png"
-    },
-    {
-        "id": 18,
-        "name": "Luzza",
-        "description": "LED floor lamp",
-        "originalPrice": "Rp 8.000.000",
-        "isNew": "false",
-        "category":"desk",
-        "image": "https://imagens-jsonserver.s3.us-east-1.amazonaws.com/Image2.png"
-    },
-    {
-        "id": 19,
-        "name": "Nimbus",
-        "description": "Contemporary sideboard",
-        "originalPrice": "Rp 5.000.000",
-        "discountPrice": "Rp 4.500.000",
-        "discountPercentage": "-10%",
-        "isNew": "true",
-        "category":"sofa",
-        "image": "https://imagens-jsonserver.s3.us-east-1.amazonaws.com/Image3.png"
-    },
-    {
-        "id": 20,
-        "name": "Luma",
-        "description": "Minimalist desk",
-        "originalPrice": "Rp 4.000.000",
-        "isNew": "false",
-        "category":"desk",
-        "image": "https://imagens-jsonserver.s3.us-east-1.amazonaws.com/Image4.png"
-    },
-    {
-        "id": 21,
-        "name": "Orca",
-        "description": "Modern chair",
-        "originalPrice": "Rp 3.000.000",
-        "isNew": "true",
-        "category":"chair",
-        "image": "https://imagens-jsonserver.s3.us-east-1.amazonaws.com/Image5.png"
-    },
-    {
-        "id": 22,
-        "name": "Vela",
-        "description": "Contemporary table lamp",
-        "originalPrice": "Rp 1.500.000",
-        "isNew": "false",
-        "category":"table",
-        "image": "https://imagens-jsonserver.s3.us-east-1.amazonaws.com/Image6.png"
-    },
-    {
-        "id": 23,
-        "name": "Echo",
-        "description": "Stylish bookshelf",
-        "originalPrice": "Rp 2.500.000",
-        "isNew": "true",
-        "category":"sofa",
-        "image": "https://imagens-jsonserver.s3.us-east-1.amazonaws.com/Image7.png"
-    },
-    {
-        "id": 24,
-        "name": "Atlas",
-        "description": "Modern armchair",
-        "originalPrice": "Rp 2.000.000",
-        "isNew": "false",
-        "category":"sofa",
-        "image": "https://imagens-jsonserver.s3.us-east-1.amazonaws.com/Image8.png"
-    }
-    ]
-}
+ 
+        "products": [
+          {
+            "id": 1,
+            "name": "Syltherine",
+            "description": "Stylish cafe chair",
+            "originalPrice": 3500000,
+            "discountPrice": 2500000,
+            "discountPercentage": -30,
+            "isNew": false,
+            "category": "chair",
+            "image": "https://imagens-jsonserver.s3.us-east-1.amazonaws.com/Image1.png"
+          },
+          {
+            "id": 2,
+            "name": "Leviosa",
+            "description": "Stylish cafe chair",
+            "originalPrice": 3000000,
+            "discountPrice": null,
+            "discountPercentage": null,
+            "isNew": true,
+            "category": "chair",
+            "image": "https://imagens-jsonserver.s3.us-east-1.amazonaws.com/Image2.png"
+          },
+          {
+            "id": 3,
+            "name": "Lolito",
+            "description": "Stylish cafe chair",
+            "originalPrice": 14000000,
+            "discountPrice": 7000000,
+            "discountPercentage": -50,
+            "isNew": false,
+            "category": "chair",
+            "image": "https://imagens-jsonserver.s3.us-east-1.amazonaws.com/Image3.png"
+          },
+          {
+            "id": 4,
+            "name": "Respira",
+            "description": "Outdoor bar table and stool",
+            "originalPrice": 5000000,
+            "discountPrice": null,
+            "discountPercentage": null,
+            "isNew": true,
+            "category": "table",
+            "image": "https://imagens-jsonserver.s3.us-east-1.amazonaws.com/Image4.png"
+          },
+          {
+            "id": 5,
+            "name": "Grifo",
+            "description": "Night lamp",
+            "originalPrice": 200000,
+            "discountPrice": null,
+            "discountPercentage": null,
+            "isNew": false,
+            "category": "table",
+            "image": "https://imagens-jsonserver.s3.us-east-1.amazonaws.com/Image5.png"
+          },
+          {
+            "id": 6,
+            "name": "Muggo",
+            "description": "Small mug",
+            "originalPrice": 2000000,
+            "discountPrice": 1500000,
+            "discountPercentage": -25,
+            "isNew": false,
+            "category": "table",
+            "image": "https://imagens-jsonserver.s3.us-east-1.amazonaws.com/Image6.png"
+          },
+          {
+            "id": 7,
+            "name": "Pingky",
+            "description": "Cute bed set",
+            "originalPrice": 8000000,
+            "discountPrice": null,
+            "discountPercentage": null,
+            "isNew": true,
+            "category": "bed",
+            "image": "https://imagens-jsonserver.s3.us-east-1.amazonaws.com/Image7.png"
+          },
+          {
+            "id": 8,
+            "name": "Leviosa",
+            "description": "Stylish cafe chair",
+            "originalPrice": 3000000,
+            "discountPrice": null,
+            "discountPercentage": null,
+            "isNew": false,
+            "category": "chair",
+            "image": "https://imagens-jsonserver.s3.us-east-1.amazonaws.com/Image8.png"
+          },
+          {
+            "id": 9,
+            "name": "Potty",
+            "description": "Minimalist flower pot",
+            "originalPrice": 1000000,
+            "discountPrice": 500000,
+            "discountPercentage": -50,
+            "isNew": true,
+            "category": "table",
+            "image": "https://imagens-jsonserver.s3.us-east-1.amazonaws.com/Image1.png"
+          },
+          {
+            "id": 10,
+            "name": "Respira",
+            "description": "Outdoor bar table and stool",
+            "originalPrice": 5000000,
+            "discountPrice": null,
+            "discountPercentage": null,
+            "isNew": false,
+            "category": "table",
+            "image": "https://imagens-jsonserver.s3.us-east-1.amazonaws.com/Image2.png"
+          },
+          {
+            "id": 11,
+            "name": "Grifo",
+            "description": "Night lamp",
+            "originalPrice": 200000,
+            "discountPrice": null,
+            "discountPercentage": null,
+            "isNew": false,
+            "category": "bed",
+            "image": "https://imagens-jsonserver.s3.us-east-1.amazonaws.com/Image3.png"
+          },
+          {
+            "id": 12,
+            "name": "Muggo",
+            "description": "Small mug",
+            "originalPrice": 2000000,
+            "discountPrice": null,
+            "discountPercentage": null,
+            "isNew": false,
+            "category": "chair",
+            "image": "https://imagens-jsonserver.s3.us-east-1.amazonaws.com/Image4.png"
+          },
+          {
+            "id": 13,
+            "name": "Arka",
+            "description": "Modern coffee table",
+            "originalPrice": 4500000,
+            "discountPrice": null,
+            "discountPercentage": null,
+            "isNew": true,
+            "category": "table",
+            "image": "https://imagens-jsonserver.s3.us-east-1.amazonaws.com/Image5.png"
+          },
+          {
+            "id": 14,
+            "name": "EcoShade",
+            "description": "Sustainable desk lamp",
+            "originalPrice": 1500000,
+            "discountPrice": 1200000,
+            "discountPercentage": -20,
+            "isNew": false,
+            "category": "desk",
+            "image": "https://imagens-jsonserver.s3.us-east-1.amazonaws.com/Image6.png"
+          },
+          {
+            "id": 15,
+            "name": "Luna",
+            "description": "Minimalist pendant light",
+            "originalPrice": 1000000,
+            "discountPrice": null,
+            "discountPercentage": null,
+            "isNew": true,
+            "category": "desk",
+            "image": "https://imagens-jsonserver.s3.us-east-1.amazonaws.com/Image7.png"
+          },
+          {
+            "id": 16,
+            "name": "Comodo",
+            "description": "Soft armchair",
+            "originalPrice": 1200000,
+            "discountPrice": null,
+            "discountPercentage": null,
+            "isNew": false,
+            "category": "sofa",
+            "image": "https://imagens-jsonserver.s3.us-east-1.amazonaws.com/Image8.png"
+          },
+          {
+            "id": 17,
+            "name": "Verta",
+            "description": "Elegant side table",
+            "originalPrice": 500000,
+            "discountPrice": null,
+            "discountPercentage": null,
+            "isNew": true,
+            "category": "table",
+            "image": "https://imagens-jsonserver.s3.us-east-1.amazonaws.com/Image1.png"
+          },
+          {
+            "id": 18,
+            "name": "Luzza",
+            "description": "LED floor lamp",
+            "originalPrice": 8000000,
+            "discountPrice": null,
+            "discountPercentage": null,
+            "isNew": false,
+            "category": "desk",
+            "image": "https://imagens-jsonserver.s3.us-east-1.amazonaws.com/Image2.png"
+          },
+          {
+            "id": 19,
+            "name": "Nimbus",
+            "description": "Contemporary sideboard",
+            "originalPrice": 5000000,
+            "discountPrice": 4500000,
+            "discountPercentage": -10,
+            "isNew": true,
+            "category": "sofa",
+            "image": "https://imagens-jsonserver.s3.us-east-1.amazonaws.com/Image3.png"
+          },
+          {
+            "id": 20,
+            "name": "Luma",
+            "description": "Minimalist desk",
+            "originalPrice": 4000000,
+            "discountPrice": null,
+            "discountPercentage": null,
+            "isNew": false,
+            "category": "desk",
+            "image": "https://imagens-jsonserver.s3.us-east-1.amazonaws.com/Image4.png"
+          },
+          {
+            "id": 21,
+            "name": "Orca",
+            "description": "Modern chair",
+            "originalPrice": 3000000,
+            "discountPrice": null,
+            "discountPercentage": null,
+            "isNew": true,
+            "category": "chair",
+            "image": "https://imagens-jsonserver.s3.us-east-1.amazonaws.com/Image5.png"
+          },
+          {
+            "id": 22,
+            "name": "Vela",
+            "description": "Contemporary table lamp",
+            "originalPrice": 1500000,
+            "discountPrice": null,
+            "discountPercentage": null,
+            "isNew": false,
+            "category": "table",
+            "image": "https://imagens-jsonserver.s3.us-east-1.amazonaws.com/Image6.png"
+          },
+          {
+            "id": 23,
+            "name": "Echo",
+            "description": "Stylish bookshelf",
+            "originalPrice": 2500000,
+            "discountPrice": null,
+            "discountPercentage": null,
+            "isNew": true,
+            "category": "sofa",
+            "image": "https://imagens-jsonserver.s3.us-east-1.amazonaws.com/Image7.png"
+          },
+          {
+            "id": 24,
+            "name": "Atlas",
+            "description": "Modern armchair",
+            "originalPrice": 2000000,
+            "discountPrice": null,
+            "discountPercentage": null,
+            "isNew": false,
+            "category": "sofa",
+            "image": "https://imagens-jsonserver.s3.us-east-1.amazonaws.com/Image8.png"
+          }
+        ]
+      }
+      

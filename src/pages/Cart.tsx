@@ -33,14 +33,12 @@ const Cart = () => {
 
   const calculateTotal = () => {
     return cart.reduce((total, item) => {
-      const itemSubtotal = (product?.originalPrice ?? 0) * (product?.quantity ?? 0);
+      const itemSubtotal = (item?.originalPrice ?? 0) * (item?.quantity ?? 0);
       return total + itemSubtotal;
     }, 0);
   };
 
   const total = calculateTotal();
-
-
 
 
   return (
@@ -76,24 +74,22 @@ const Cart = () => {
                   <span className="text-[##9F9F9F]">{item.name}</span>
                 </td>
                 <td className="px-4 py-2 text-[##9F9F9F]">
-                  {item.originalprice}
+                  {item.originalPrice}
                 </td>
                 <td className="px-4 py-2 flex items-center border-2 rounded-xl border-[#9F9F9F] w-[107px]">
                   <button
                      onClick={() => decreaseQuantity(item.id)}
                     className="text-black w-10 h-10 flex items-center justify-center"
-                  >
-                    -
+                  > -
                   </button>
                   <span className="text-xl font-medium mx-2">{item.quantity}</span>
                   <button
                     onClick={() => increaseQuantity(item.id)}
                     className="text-black w-10 h-10 flex items-center justify-center"
-                  >
-                    +
+                  >+
                   </button>
                 </td>
-                <td className="px-4 py-2"> {(item.originalprice * item.quantity).toFixed(2)}</td>
+                <td className="px-4 py-2">{(item.originalPrice * item.quantity).toFixed(2)}</td>
                 <td className="px-4 py-2">
                   <img
                     src={Delete}

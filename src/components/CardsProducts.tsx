@@ -66,10 +66,10 @@ if (!product) return <div>Carregando...</div>;
           {product.discountPercentage &&
             product.discountPrice !== product.originalPrice && (
               <div className="flex items-center justify-center bg-[#E97171] text-white rounded-full w-[48px] h-[48px] absolute top-2 left-2">
-                <span className="text-sm">{product.discountPercentage}</span>
+                <span className="text-sm">{product.discountPercentage} % </span>
               </div>
             )}
-          {product.isNew === "true" && (
+          {product.isNew === true && (
             <div className="flex items-center justify-center bg-[#2EC1AC] text-white rounded-full w-[48px] h-[48px] absolute top-2 left-2">
               <span className="text-sm">New</span>
             </div>

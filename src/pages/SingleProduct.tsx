@@ -19,9 +19,17 @@ const SingleProduct = () => {
 
   useEffect(() => {
     fetch(`http://localhost:3000/products/${id}`)
-      .then((response) => response.json())
-      .then((data) => setProduct(data));
-  }, [id]);
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error('Produto não encontrado');
+        }
+        return response.json();
+      })
+      .then((data) => setProduct(data))
+      .catch((error) => {
+        console.error('Erro ao buscar o produto:', error);
+      });
+  }, []);
 
   return (
     <div>
