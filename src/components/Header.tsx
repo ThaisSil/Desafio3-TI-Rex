@@ -20,6 +20,9 @@ const Header = () => {
   const handleGoToCart = () => {
     navigate("/Cart");
   };
+  const handleGoToCheckout = () => {
+    navigate("/Checkout");
+  }
   
 
   return (
@@ -78,27 +81,29 @@ const Header = () => {
                         </div>
                       </div>
                     </div>
-                    <div>
-                      <span>Subtotal</span>
-                      <span className="text-[#B88E2F] font-semibold"> 
-                        {(item?.originalPrice ?? 0) * (item?.quantity ?? 0)}
-                      </span>
-                     
+                    
                     </div>
-                    </div>
-                ))};
+                ))}
+
+                <div className="mt-[250px]">
+                  <span className="px-4 mr-40">Subtotal</span>
+                  <span className="text-[#B88E2F] font-semibold"> R$ 
+                    {cart.reduce((total, item) => total + (item.originalPrice * item.quantity), 0).toFixed(2)}
+                  </span>
+                </div>
                 
-                <div>
+                <div className="">
                   <button
-                    className="w-[87px] h-[30px] border border-black rounded-3xl gap-3 text-center"
+                    className="w-[87px] h-[30px] border border-black rounded-3xl gap-3 mx-4 text-center"
                     onClick={handleGoToCart}
                   >
                     Cart
                   </button>
-                  <button className="w-[118px] h-[30px] border border-black rounded-3xl gap-3 text-center">
+                  <button className="w-[118px] h-[30px] border border-black rounded-3xl gap-3 text-center"
+                  onClick={handleGoToCheckout}>
                     Checkout
                   </button>
-                  <button className="w-[135px] h-[30px] border border-black rounded-3xl gap-3 text-center">
+                  <button className="w-[135px] h-[30px] border border-black rounded-3xl gap-3 mx-4 text-center">
                     Comparison
                   </button>
                 </div>
