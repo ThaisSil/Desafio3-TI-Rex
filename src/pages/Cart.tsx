@@ -2,9 +2,7 @@ import { useState, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import Header from "../components/Header";
 import Banner from "../components/Banner";
-import BgBanner from "../assets/images/BgBanner.png";
 import Warranty from "../components/Warranty";
-import Delete from "../assets/images/Delete.png";
 import { Product } from "../types/product";
 import { useCart } from "../context/CartContext";
 
@@ -40,12 +38,13 @@ const Cart = () => {
 
   const total = calculateTotal();
 
+    
 
   return (
     <div>
       <Header />
       <Banner
-        bgImage={BgBanner}
+        bgImage='https://imagens-jsonserver.s3.us-east-1.amazonaws.com/BgBanner.png'
         title="Cart "
         subtitle="Home >"
         paragraph="Cart"
@@ -92,7 +91,7 @@ const Cart = () => {
                 <td className="px-4 py-2">{(item.originalPrice * item.quantity).toFixed(2)}</td>
                 <td className="px-4 py-2">
                   <img
-                    src={Delete}
+                    src='https://imagens-jsonserver.s3.us-east-1.amazonaws.com/Delete.png'
                     alt="delete"
                     className="cursor-pointer"
                     data-id={item.id}

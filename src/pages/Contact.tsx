@@ -1,6 +1,5 @@
 import Header from '../components/Header'
 import Banner from '../components/Banner'
-import BgBanner from '../assets/images/BgBanner.png'
 import Warranty from '../components/Warranty'
 import Footer from '../components/Footer'
 import ContactLayout from '../layout/ContactLayout'
@@ -11,7 +10,7 @@ const Contact = () => {
     <div>
       <Header />
       <Banner 
-      bgImage={BgBanner}
+      bgImage='https://imagens-jsonserver.s3.us-east-1.amazonaws.com/BgBanner.png'
       title='Contact '
       subtitle= 'Home >'
       paragraph='Contact'/>

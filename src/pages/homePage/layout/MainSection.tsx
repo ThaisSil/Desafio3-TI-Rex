@@ -1,9 +1,8 @@
-import Image from '../../../assets/images/MainImage.png';
 
 const MainSection = () => {
   return (
     <div  className="flex flex-col justify-between items-center bg-cover bg-center lg:flex-row md:h-[644px]"
-    style={{ backgroundImage: `url(${Image})` }}>
+    style={{ backgroundImage: `url(https://imagens-jsonserver.s3.us-east-1.amazonaws.com/MainImage.png)` }}>
         <div className=' w-[643px] h-[443px] bg-[#FFF3E3] border-2 rounded-[10px] pt-[62px] px-14 ml-auto mr-14'>
           <p className='font-semibold align-top text-left text-[#333333]'>New Arrival</p>
           <p className='font-bold text-[#B88E2F] text-left text-[52px]'>Discover Our New Collection</p>

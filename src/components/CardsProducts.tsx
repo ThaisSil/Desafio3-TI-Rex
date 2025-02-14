@@ -1,8 +1,5 @@
 import { useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
-import Share from '../assets/images/Share.png';
-import Compare from '../assets/images/Compare.png';
-import Heart from '../assets/images/Heart.png';
 import { Product } from "../types/product";
 import { useCart } from "../context/CartContext";
 
@@ -99,9 +96,9 @@ if (!product) return <div>Carregando...</div>;
                 Add to Cart
               </button>
               <div className="flex items-center justify-around mt-6 mx-4">
-                <img src={Share} alt="share" /><span className="text-white font-semibold">Share</span>
-                <img src={Compare} alt="share" /><span className="text-white font-semibold">Compare</span>
-                <img src={Heart} alt="share" /><span className="text-white font-semibold">Like</span>
+                <img src='https://imagens-jsonserver.s3.us-east-1.amazonaws.com/Share.png' alt="share" /><span className="text-white font-semibold">Share</span>
+                <img src='https://imagens-jsonserver.s3.us-east-1.amazonaws.com/Compare.png' alt="compare" /><span className="text-white font-semibold">Compare</span>
+                <img src='https://imagens-jsonserver.s3.us-east-1.amazonaws.com/Heart.png'alt="heart" /><span className="text-white font-semibold">Like</span>
               </div>
             </div>
           </div>

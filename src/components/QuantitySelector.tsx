@@ -29,7 +29,7 @@ const QuantitySelector = () => {
 
   const handleAddToCart = () => {
     if (product) {
-      addToCart({ ...product, originalprice: product.originalPrice, quantity });
+      addToCart({ ...product, originalPrice: product.originalPrice, quantity });
 
       navigate("/Cart");
     }

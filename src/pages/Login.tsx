@@ -1,7 +1,6 @@
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Banner from "../components/Banner";
-import BgBanner from "../assets/images/BgBanner.png";
 import React from "react";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
@@ -50,7 +49,7 @@ const LoginPage: React.FC = () => {
     <div>
       <Header />
       <Banner
-        bgImage={BgBanner}
+        bgImage='https://imagens-jsonserver.s3.us-east-1.amazonaws.com/BgBanner.png'
         title="Login"
         subtitle="Home >"
         paragraph="Login"

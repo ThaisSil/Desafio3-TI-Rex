@@ -1,10 +1,4 @@
 import { useState } from 'react';
-import Facebook from '../assets/images/Facebook.png';
-import Instagram from '../assets/images/Instagram.png';
-import Twiter from '../assets/images/Twiter.png';
-import Linkedin from '../assets/images/Linkedin.png';
-
-
 
 
 
@@ -49,10 +43,10 @@ const Footer = () => {
       FL 33134 USA</p>
       </div>
       <div className='flex mt-6'>
-      <a href="https://www.facebook.com/"><img src={Facebook} alt="Facebook"/></a>
-      <a href="https://www.instagram.com/"><img src={Instagram} alt='Instagram'/> </a>
-      <a href="https://x.com/"><img src={Twiter} alt="Twitter" /></a> 
-      <a href="https://www.linkedin.com/"><img src={Linkedin} alt="Linkedin" /></a>
+      <a href="https://www.facebook.com/"><img src='https://imagens-jsonserver.s3.us-east-1.amazonaws.com/Facebook.png' alt="Facebook"/></a>
+      <a href="https://www.instagram.com/"><img src= 'https://imagens-jsonserver.s3.us-east-1.amazonaws.com/Instagram.png' alt='Instagram'/> </a>
+      <a href="https://x.com/"><img src='https://imagens-jsonserver.s3.us-east-1.amazonaws.com/Twiter.png' alt="Twitter" /></a> 
+      <a href="https://www.linkedin.com/"><img src= 'https://imagens-jsonserver.s3.us-east-1.amazonaws.com/Linkedin.png' alt="Linkedin" /></a>
               
         </div>
       </div>

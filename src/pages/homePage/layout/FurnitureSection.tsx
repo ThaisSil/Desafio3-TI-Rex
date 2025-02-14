@@ -1,4 +1,4 @@
-import Furniture from '../../../assets/images/Furniture.png';
+
 
 const FurnitureSection = () => {
   return (
@@ -6,7 +6,7 @@ const FurnitureSection = () => {
         <p className="font-semibold text-xl text-center text-[#616161]">Share your setup with</p>
         <p className="font-bold text-[40px] text-center text-[#3A3A3A]">#FuniroFurniture</p>
         <div className='flex justify-center'>
-        <img src={Furniture} alt="furniture" />
+        <img src='https://imagens-jsonserver.s3.us-east-1.amazonaws.com/Furniture.png' alt="furniture" />
         </div>
 
       

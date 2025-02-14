@@ -24,7 +24,7 @@ const Checkout = () => {
     <div>
       <Header />
       <Banner
-        bgImage={BgBanner}
+        bgImage='https://imagens-jsonserver.s3.us-east-1.amazonaws.com/BgBanner.png'
         title="Checkout "
         subtitle="Home >"
         paragraph="Checkout"

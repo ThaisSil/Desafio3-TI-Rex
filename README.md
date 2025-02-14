@@ -1,50 +1,139 @@
-# React + TypeScript + Vite
+# Desafio 2 - Persistence Squad * TI_Rex
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 📌 Sobre
+Este é um projeto para um site de e-commerce especializado na venda de móveis, com funcionalidades de um carrosel na Home, exibição de todos os produtos, uma páina com detalhes do produto, carrinho de compras, checkout, contato e login..
+Este repositório contém a solução para o Desafio 3 do programa de bolsas Compass Uol. O objetivo do desafio é recriar as páginas, respeitando fielmente o design fornecido no [Figma](https://www.figma.com/design/E1F9AbyIRppkO2Ro1oP2tj/Desafio-3?node-id=0-1&p=f&t=MuelEovB8neuDa8H-0).
 
-Currently, two official plugins are available:
+## 🚀 Tecnologias utilizadas
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+![HTML](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
+![TailwindCSS](https://img.shields.io/badge/TailwindCSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)
+![React](https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black)
+![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)
+![JSON Server](https://img.shields.io/badge/JSON%20Server-323330?style=for-the-badge&logo=json&logoColor=white)
+![Clerk](https://img.shields.io/badge/Clerk-F7DF1E?style=for-the-badge&logo=clerk&logoColor=black)
 
-## Expanding the ESLint configuration
+ 
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+### Sobre
+Este projeto é um e-commerce de móveis, onde os usuários podem visualizar, adicionar ao carrinho, e comprar diversos tipos de móveis. A aplicação está dividida entre o front-end (com React) e o back-end (JsonServer), e as imagens dos produtos estão armazenadas no AWS S3.
 
-- Configure the top-level `parserOptions` property like this:
+#### Funcionalidades
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+O site é composto de:
+
+**Header**
+- Botões com direcionamento da páginas correspondentes;
+- Icone de usuário direciona para a página do Login;
+- Icone de carrinho abre um overlay com o resumo do carrinho;
+
+**Home**
+- Informações sobre a loja
+- Uma seção com os produtos da loja, clicando no produto o usuário será encaminhado para a página detalhada do produto (SingleProduct) e passando o mouse sobre a imagem do produto encontra-se o botão para adicionar diretamente ao carrinho
+- Um carrossel com mostruário dos produtos da Loja;
+
+**Login**
+- Formulário com todas as validações;  
+
+**Shop**
+- Botão de filtro com as categorias;
+- Paginação mostrando a quantidade de produtos por página;
+- Cards dos produtos funcionam da mesma maneira da home, abrindo um overlay com botão de adicionar ao carrinho ou clicando na imagem encaminha para a pagina detalhada do produto; 
+
+**Single Product**
+- Mostra o produto em detalhes, com informações e fotos;
+- Botão para selecionar a quantidade de produtos;
+- Botão para adicionar ao carrinho;
+
+**Cart**
+- Carrinho adiciona produtos com imagem, nome, preço, quantidade e subtotal
+- Icone da lixeira exclui os produtos;
+- Card com resumo da compra mostrando o produto adicionado pelo nome, o subtotal e total da compra;
+- Botão de checkout encaminha para a finalização da compra (usuário precisa estar logado para ser encaminhado para a página de login)  
+
+**Chekout**
+- Formulário para o faturamento com as validações em todos os campos;
+- Resumo da compra, mostrando produto, subtotal e total;
+
+**Contact**
+- Formulário para contactar a empresa, com as devidas validações 
+
+
+
+## 🙋🏻‍♂️ Autores
+
+ [<img src="https://avatars.githubusercontent.com/u/121143376?v=4" width=115><br><sub>Thais Silva</sub>](https://github.com/ThaisSil) |
+ 
+ 
+
+
+## 🛠️ Como executar o projeto
+
+Clone o repositório:
+
+- Clone este repositório em sua máquina local usando o comando `git clone`.
+
+  -git clone [Repo](https://github.com/ThaisSil/Desafio3-TI-Rex.git)
+
+
+# Project Dependencies
+
+This project uses the following dependencies:
+
+- **Frontend Frameworks & Tools**:
+  - `@clerk/clerk-react@5.21.0`: Authentication library for React applications.
+  - `react@18.3.1`: JavaScript library for building user interfaces.
+  - `react-dom@18.3.1`: Entry point for React to interact with the DOM.
+  - `react-router-dom@7.1.1`: Declarative routing for React applications.
+
+- **Build Tools**:
+  - `vite@6.0.7`: Next-generation frontend tooling for development and build.
+  - `@vitejs/plugin-react@4.3.4`: Plugin for Vite to support React fast refresh and JSX.
+
+- **CSS Framework**:
+  - `tailwindcss@3.4.17`: Utility-first CSS framework for styling.
+
+- **Development Tools**:
+  - `concurrently@9.1.2`: Run multiple commands concurrently.
+  - `eslint@9.17.0`: JavaScript linter to enforce code quality and consistency.
+  - `@eslint/js@9.17.0`: Core configuration for ESLint.
+  - `eslint-plugin-react-hooks@5.1.0`: ESLint rules for React hooks.
+  - `eslint-plugin-react-refresh@0.4.16`: Plugin for ensuring fast refresh compatibility in React.
+  - `globals@15.14.0`: Global variables configuration for ESLint.
+
+- **TypeScript Support**:
+  - `typescript@5.6.3`: Language for type safety and development productivity.
+  - `typescript-eslint@8.19.1`: Integration between TypeScript and ESLint.
+  - `@types/react@18.3.18`: Type definitions for React.
+  - `@types/react-dom@18.3.5`: Type definitions for React DOM.
+
+- **Mock API**:
+  - `json-server@1.0.0-beta.3`: Create a mock REST API using a JSON file as the database.
+
+---
+
+### Installing Dependencies
+To install these dependencies, run:
+```bash
+npm install
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+### Running the Project
+Use the following scripts defined in the `package.json`:
+- **Development**: Starts the development server with Vite, Tailwind CSS, and JSON Server:
+  ```bash
+  npm run dev
+  ```
+- **Build**: Compiles the project for production:
+  ```bash
+  npm run build
+  ```
+- **Lint**: Runs ESLint to check for code issues:
+  ```bash
+  npm run lint
+  ```
+- **Preview**: Previews the production build:
+  ```bash
+  npm run preview
+  ```

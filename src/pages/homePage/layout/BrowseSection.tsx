@@ -1,8 +1,4 @@
 
-import Dining from '../../../assets/images/Dining.png';
-import Living from '../../../assets/images/Living.png';
-import Bedroom from '../../../assets/images/Bedroom.png';
-
 
 const BrowseSection = () => {
   return (
@@ -13,15 +9,15 @@ const BrowseSection = () => {
         </div>
         <div className='flex flex-row justify-between gap-5'>
         <div>
-            <img src={Dining} alt="dining"/>
+            <img src='https://imagens-jsonserver.s3.us-east-1.amazonaws.com/Dining.png' alt="dining"/>
             <p className='font-semibold text-2xl text-center text-[#333333] p-7'>Dining</p>
         </div>
         <div>
-            <img src={Living} alt="living" />
+            <img src='https://imagens-jsonserver.s3.us-east-1.amazonaws.com/Living.png' alt="living" />
             <p className='font-semibold text-2xl text-center text-[#333333] p-7'>Living</p>
         </div>
         <div>
-            <img src={Bedroom} alt="bedroom" />
+            <img src='https://imagens-jsonserver.s3.us-east-1.amazonaws.com/Bedroom.png' alt="bedroom" />
             <p className='font-semibold text-2xl text-center text-[#333333] p-7'>Bedroom</p>
         </div>
         </div>

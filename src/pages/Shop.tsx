@@ -1,18 +1,12 @@
 import Header from "../components/Header";
 import Banner from "../components/Banner";
-import BgBanner from "../assets/images/BgBanner.png";
 import Warranty from "../components/Warranty";
 import Footer from "../components/Footer";
-import Filter from "../assets/images/filter.png";
-import Grid from "../assets/images/Grid.png";
-import ViewList from "../assets/images/ViewList.png";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import Share from "../assets/images/Share.png";
-import Compare from "../assets/images/Compare.png";
-import Heart from "../assets/images/Heart.png";
 import { Product } from "../types/product";
 import { useCart } from "../context/CartContext";
+
 
 const Shop = () => {
   const [product, setProduct] = useState<Product[]>([]);
@@ -78,7 +72,7 @@ const Shop = () => {
     <div>
       <Header />
       <Banner
-        bgImage={BgBanner}
+        bgImage='https://imagens-jsonserver.s3.us-east-1.amazonaws.com/BgBanner.png'
         title="Shop "
         subtitle="Home >"
         paragraph="Shop"
@@ -89,7 +83,7 @@ const Shop = () => {
           className="flex flex-row gap-4 mr-6 cursor-pointer"
           onClick={handleFilterToggle}
         >
-          <img src={Filter} alt="Filter" />
+          <img src='https://imagens-jsonserver.s3.us-east-1.amazonaws.com/filter.png' alt="Filter" />
           <p className="text-xl">Filter</p>
         </div>
         {openOption && (
@@ -110,8 +104,8 @@ const Shop = () => {
         )}
 
         <div className="flex flex-row mx-6 gap-4">
-          <img src={Grid} alt="grid" />
-          <img src={ViewList} alt="viewlist" />
+          <img src='https://imagens-jsonserver.s3.us-east-1.amazonaws.com/Grid.png' alt="grid" />
+          <img src='https://imagens-jsonserver.s3.us-east-1.amazonaws.com/ViewList.png' alt="viewlist" />
         </div>
 
         <div className="border-l-2 border-[#9F9F9F] mx-[30px]">
@@ -195,11 +189,11 @@ const Shop = () => {
                   Add to Cart
                 </button>
                 <div className="flex items-center justify-around mt-6 mx-4">
-                  <img src={Share} alt="share" />
+                  <img src='https://imagens-jsonserver.s3.us-east-1.amazonaws.com/Share.png' alt="share" />
                   <span className="text-white font-semibold">Share</span>
-                  <img src={Compare} alt="compare" />
+                  <img src='https://imagens-jsonserver.s3.us-east-1.amazonaws.com/Compare.png' alt="compare" />
                   <span className="text-white font-semibold">Compare</span>
-                  <img src={Heart} alt="like" />
+                  <img src='https://imagens-jsonserver.s3.us-east-1.amazonaws.com/Heart.png' alt="like" />
                   <span className="text-white font-semibold">Like</span>
                 </div>
               </div>

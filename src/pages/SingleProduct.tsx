@@ -3,10 +3,7 @@ import CardsProducts from "../components/CardsProducts";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import { useParams, Link } from "react-router-dom";
-import Stars from "../assets/images/Group 88.png";
 import QuantitySelector from "../components/QuantitySelector";
-import Sofa from "../assets/images/Sofa.png";
-import Diva from "../assets/images/Diva.png";
 import { Product } from "../types/product";
 
 
@@ -98,7 +95,7 @@ const SingleProduct = () => {
                 {product.originalPrice}
               </p>
               <div className="flex flex-row mb-4">
-                <img src={Stars} alt="stars" />
+                <img src='https://imagens-jsonserver.s3.us-east-1.amazonaws.com/Share.png' alt="stars" />
                 <p className="text-xs text-[#9F9F9F]">5 Customer Review</p>
               </div>
               <p className="text-xs mb-6">
@@ -164,8 +161,8 @@ const SingleProduct = () => {
                   </p>
                 </div>
                 <div className="flex flex-row gap-7 mx-[100px]">
-                  <img src={Sofa} alt="sofa" className="w-[605px] h-[348px] bg-[#F9F1E7] rounded-xl" />
-                  <img src={Diva} alt="diva" />
+                  <img src='https://imagens-jsonserver.s3.us-east-1.amazonaws.com/Sofa.png' alt="sofa" className="w-[605px] h-[348px] bg-[#F9F1E7] rounded-xl" />
+                  <img src='https://imagens-jsonserver.s3.us-east-1.amazonaws.com/Diva.png' alt="diva" />
                 </div>
               </div>
 

@@ -3,8 +3,6 @@ import { useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faShoppingCart, faUser } from "@fortawesome/free-solid-svg-icons";
 import Navbar from "../components/NavBar";
-import logo from "../assets/images/Logo.png";
-import CloseCart from "../assets/images/CloseCart.png"
 import { Link } from "react-router-dom";
 import { useCart } from "../context/CartContext";
 
@@ -29,7 +27,7 @@ const Header = () => {
     <header className="my-6 ml-8 sm:ml-4">
       <div className="flex items-center justify-between">
         <div className="flex items-center space-x-4">
-          <img className=" w-[50px] h-8" src={logo} alt="logo" />
+          <img className=" w-[50px] h-8" src='https://imagens-jsonserver.s3.us-east-1.amazonaws.com/Logo.png' alt="logo" />
           <h1 className=" text-black text-[32px] font-bold ">Furniro</h1>
         </div>
         <div>
@@ -52,7 +50,7 @@ const Header = () => {
               <p className="font-semibold text-2xl ">
                 Shopping Cart
               </p>
-           <img src={CloseCart} alt="closecart" className="w-4 h-5 cursor-pointer" onClick={handleCartToggle} />
+           <img src='https://imagens-jsonserver.s3.us-east-1.amazonaws.com/CloseCart.png' alt="closecart" className="w-4 h-5 cursor-pointer" onClick={handleCartToggle} />
            </div>
               <hr className="w-[287px] text-[#D9D9D9]  mx-[75px]" />
               <div>
