@@ -1,7 +1,7 @@
-# Desafio 2 - Persistence Squad * TI_Rex
+# Desafio 3 - TI_Rex
 
 ## 📌 Sobre
-Este é um projeto para um site de e-commerce especializado na venda de móveis, com funcionalidades de um carrosel na Home, exibição de todos os produtos, uma páina com detalhes do produto, carrinho de compras, checkout, contato e login..
+Este é um projeto para um site de e-commerce especializado na venda de móveis, com funcionalidades de um carrosel na Home, exibição de todos os produtos, uma página com detalhes do produto, carrinho de compras, checkout, contato e login..
 Este repositório contém a solução para o Desafio 3 do programa de bolsas Compass Uol. O objetivo do desafio é recriar as páginas, respeitando fielmente o design fornecido no [Figma](https://www.figma.com/design/E1F9AbyIRppkO2Ro1oP2tj/Desafio-3?node-id=0-1&p=f&t=MuelEovB8neuDa8H-0).
 
 ## 🚀 Tecnologias utilizadas
@@ -17,7 +17,7 @@ Este repositório contém a solução para o Desafio 3 do programa de bolsas Com
  
 
 ### Sobre
-Este projeto é um e-commerce de móveis, onde os usuários podem visualizar, adicionar ao carrinho, e comprar diversos tipos de móveis. A aplicação está dividida entre o front-end (com React) e o back-end (JsonServer), e as imagens dos produtos estão armazenadas no AWS S3.
+Este projeto é um e-commerce de móveis, onde os usuários podem visualizar os produtos, adicionar ao carrinho, e comprar diversos tipos de móveis. A aplicação está dividida entre o front-end (com React) e o back-end (JsonServer), e as imagens dos produtos estão armazenadas no AWS S3.
 
 #### Funcionalidades
 
@@ -34,7 +34,7 @@ O site é composto de:
 - Um carrossel com mostruário dos produtos da Loja;
 
 **Login**
-- Formulário com todas as validações;  
+- Formulário com todas as validações; 
 
 **Shop**
 - Botão de filtro com as categorias;
@@ -57,16 +57,17 @@ O site é composto de:
 - Resumo da compra, mostrando produto, subtotal e total;
 
 **Contact**
-- Formulário para contactar a empresa, com as devidas validações 
+- Formulário para contactar a empresa, com as devidas validações;
 
-
+**Footer**
+-Icones das redes sociais são todos clicáveis sendo redirecionados para respectivas páginas de login;
+-Newlester com as devidas validações;
 
 ## 🙋🏻‍♂️ Autores
 
  [<img src="https://avatars.githubusercontent.com/u/121143376?v=4" width=115><br><sub>Thais Silva</sub>](https://github.com/ThaisSil) |
  
  
-
 
 ## 🛠️ Como executar o projeto
 
@@ -86,6 +87,9 @@ This project uses the following dependencies:
   - `react@18.3.1`: JavaScript library for building user interfaces.
   - `react-dom@18.3.1`: Entry point for React to interact with the DOM.
   - `react-router-dom@7.1.1`: Declarative routing for React applications.
+  - `@fortawesome/react-fontawesome": ^0.2.2`: Internet's icon library and toolkit
+  - `@splidejs/react-splide": "^0.7.12`: Is a React component for a Splide slider/carousel.
+  - `zod: ^3.24.1`: Is a TypeScript-first schema declaration and validation library.
 
 - **Build Tools**:
   - `vite@6.0.7`: Next-generation frontend tooling for development and build.
